@@ -1,0 +1,91 @@
+engine: jupyter
+
+chapter_id: 01_kompyuternoe_modelirovanie_i_julia
+chapter_number: 01
+title: "Компьютерное моделирование и Julia"
+status: draft
+created: 2026-09-28
+julia_environment: ../../Project.toml
+julia_project: ../../
+comment: "Создание моделей на ЭВМ с использованием языка программирования Julia"
+author: "Самаркин Александр Иванович, ПсковГУ"
+affiliation: "Псковский государственный университет"
+
+format:
+  html:
+    toc: true
+    theme: easy
+    highlight: tango
+    engine: jupyter
+    css: |
+      p {
+        text-align: justify;
+      }
+  typst: 
+    papersize: a4
+    margin: 
+      x: 2cm 
+      y: 2.5cm
+    theme: easy
+    
+    highlighter: pygments
+    
+    mainfont: "Calibri"
+    include-before-body:
+      - text: |
+          // 1. Базовые настройки текста и страниц
+          #set par(justify: true, first-line-indent: 1.5em)
+          #set text(size: 11pt, spacing: 120%)
+          
+          // 2. Изысканный нижний колонтитул с номерами страниц
+          #set page(
+            footer: context {
+              let page-num = counter(page).get().first()
+              block(width: 100%)[
+                #line(length: 100%, stroke: 0.5pt + rgb("#cbd5e1")) // Тонкая серая линия над колонтитулом
+                #v(0.2em)
+                #grid(
+                  columns: (1fr, 1fr),
+                  align(left)[#set text(size: 9pt, fill: rgb("#64748b")); #document.title], 
+                  align(right)[#set text(size: 10pt, fill: rgb("#1a365d"), weight: "bold"); #page-num]
+                )
+              ]
+            }
+          )
+          
+          // 3. Кастомизация списков (маркеры в тон заголовков)
+          #set list(marker: box(fill: rgb("#1a365d"), width: 5pt, height: 5pt, baseline: 10%))
+          
+          // 4. Заголовки 1-го уровня: темно-синий блок с белым текстом
+          #show heading.where(level: 1): it => block(
+            fill: rgb("#1a365d"),
+            width: 100%,
+            inset: (x: 12pt, y: 10pt),
+            radius: 4pt,
+            breakable: false,
+            [
+              #set text(fill: white, weight: "bold")
+              #v(-0.2em)
+              #it.body
+            ]
+          )
+          
+          // 5. Заголовки 2-го уровня: темно-синий текст с подчеркиванием
+          #show heading.where(level: 2): it => block(
+            width: 100%,
+            below: 1em,
+            above: 1.5em,
+            [
+              #set text(fill: rgb("#1a365d"), weight: "bold")
+              #it.body
+              #v(0.2em)
+              #line(length: 100%, stroke: 1pt + rgb("#1a365d"))
+            ]
+          )
+  docx:
+    toc: true
+    highlight: tango
+    reference-doc: custom-reference.docx
+
+
+  

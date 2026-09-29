@@ -1,7 +1,0 @@
-chapter_id: 01_kompyuternoe_modelirovanie_i_julia
-chapter_number: 01
-title: "Компьютерное моделирование и Julia"
-status: draft
-created: 2026-09-28
-julia_environment: ../../Project.toml
-comment: "Создание моделей на ЭВМ с использованием языка программирования Julia"

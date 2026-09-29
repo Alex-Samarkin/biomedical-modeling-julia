@@ -143,3 +143,5 @@ temp/
 !**/*.svg
 !**/*.png
 !**/*.jld2
+/.quarto/
+**/*.quarto_ipynb
