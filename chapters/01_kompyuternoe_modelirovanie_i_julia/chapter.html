@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,13 +13,10 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -72,13 +69,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="chapter_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="chapter_files/libs/quarto-html/anchor.min.js"></script>
 <link href="chapter_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="chapter_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="chapter_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="chapter_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="chapter_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="chapter_files/libs/bootstrap/bootstrap-215b371544c282197b31c8aa00ce3677.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="chapter_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -128,14 +125,21 @@ window.Quarto = {
   <li><a href="#как-организована-эта-книга" id="toc-как-организована-эта-книга" class="nav-link" data-scroll-target="#как-организована-эта-книга">Как организована эта книга</a></li>
   <li><a href="#как-подготовиться-к-работе" id="toc-как-подготовиться-к-работе" class="nav-link" data-scroll-target="#как-подготовиться-к-работе">Как подготовиться к работе</a>
   <ul class="collapse">
-  <li><a href="#как-установить-julia" id="toc-как-установить-julia" class="nav-link" data-scroll-target="#как-установить-julia">Как установить Julia</a></li>
+  <li><a href="#технические-требования" id="toc-технические-требования" class="nav-link" data-scroll-target="#технические-требования">Технические требования</a></li>
+  <li><a href="#что-желательно-знать-перед-началом" id="toc-что-желательно-знать-перед-началом" class="nav-link" data-scroll-target="#что-желательно-знать-перед-началом">Что желательно знать перед началом</a></li>
+  <li><a href="#как-установить-julia" id="toc-как-установить-julia" class="nav-link" data-scroll-target="#как-установить-julia">Как установить Julia</a>
+  <ul class="collapse">
+  <li><a href="#способ-1.-через-microsoft-store-рекомендуется-для-windows-11" id="toc-способ-1.-через-microsoft-store-рекомендуется-для-windows-11" class="nav-link" data-scroll-target="#способ-1.-через-microsoft-store-рекомендуется-для-windows-11">Способ 1. Через Microsoft Store (рекомендуется для Windows 11)</a></li>
+  <li><a href="#способ-2.-через-winget-альтернатива-для-windows-11" id="toc-способ-2.-через-winget-альтернатива-для-windows-11" class="nav-link" data-scroll-target="#способ-2.-через-winget-альтернатива-для-windows-11">Способ 2. Через winget (альтернатива для Windows 11)</a></li>
+  <li><a href="#способ-3.-через-официальный-msi-инсталлятор" id="toc-способ-3.-через-официальный-msi-инсталлятор" class="nav-link" data-scroll-target="#способ-3.-через-официальный-msi-инсталлятор">Способ 3. Через официальный MSI-инсталлятор</a></li>
+  </ul></li>
   <li><a href="#что-еще-нужно-можно-установить" id="toc-что-еще-нужно-можно-установить" class="nav-link" data-scroll-target="#что-еще-нужно-можно-установить">Что еще нужно (можно) установить</a></li>
-  <li><a href="#первые-шаги---запускаем-julia-в-терминале" id="toc-первые-шаги---запускаем-julia-в-терминале" class="nav-link" data-scroll-target="#первые-шаги---запускаем-julia-в-терминале">Первые шаги - запускаем Julia в терминале</a></li>
-  <li><a href="#вторые-шаги---запускаем-julia-в-ide-visual-studio-code" id="toc-вторые-шаги---запускаем-julia-в-ide-visual-studio-code" class="nav-link" data-scroll-target="#вторые-шаги---запускаем-julia-в-ide-visual-studio-code">Вторые шаги - запускаем Julia в IDE (Visual Studio Code)</a></li>
-  <li><a href="#третьи-шаги---запускаем-julia-в-pluto" id="toc-третьи-шаги---запускаем-julia-в-pluto" class="nav-link" data-scroll-target="#третьи-шаги---запускаем-julia-в-pluto">Третьи шаги - запускаем Julia в Pluto</a></li>
+  <li><a href="#первый-шаг---запускаем-julia-в-терминале" id="toc-первый-шаг---запускаем-julia-в-терминале" class="nav-link" data-scroll-target="#первый-шаг---запускаем-julia-в-терминале">Первый шаг - запускаем Julia в терминале</a></li>
+  <li><a href="#второй-шаг---запускаем-julia-в-ide-visual-studio-code" id="toc-второй-шаг---запускаем-julia-в-ide-visual-studio-code" class="nav-link" data-scroll-target="#второй-шаг---запускаем-julia-в-ide-visual-studio-code">Второй шаг - запускаем Julia в IDE (Visual Studio Code)</a></li>
+  <li><a href="#третий-шаг---запускаем-julia-в-pluto" id="toc-третий-шаг---запускаем-julia-в-pluto" class="nav-link" data-scroll-target="#третий-шаг---запускаем-julia-в-pluto">Третий шаг - запускаем Julia в Pluto</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="chapter.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li><li><a href="chapter.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="..\..\chapter.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li><li><a href="chapter.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
 </div>
 <main class="content" id="quarto-document-content">
 
@@ -167,9 +171,7 @@ window.Quarto = {
 <section id="что-такое-математическое-моделирование" class="level2">
 <h2 class="anchored" data-anchor-id="что-такое-математическое-моделирование">Что такое математическое моделирование</h2>
 <p>Математическое моделирование — это один из методов научного познания, при котором реальный объект, процесс или явление (<strong>моделируемый объект</strong>) заменяется их упрощённым представлением в виде системы математических выражений (уравнений, неравенств, алгоритмов), отражающих ключевые свойства, взаимосвязи и динамику изучаемой системы (<strong>моделью</strong>). Часто модель носит междисциплинарный характер, однако также часто модель относится к определенной предметной области. Вот пример известной модели перехода массы в энергию.</p>
-<p><span class="math display">\[
-E=mc^2
-\]</span></p>
+<p><span class="math display">\[E=mc^2\]</span></p>
 <p>В биологии и медицине модель описывает физиологические, биохимические, анатомические или эпидемиологические процессы с помощью количественных переменных (концентрации, давления, потоки, численности клеток, вероятности событий) и параметров, имеющих биомедицинскую интерпретацию (скорости реакций, коэффициенты диффузии, периоды полувыведения, коэффициенты передачи инфекции).</p>
 <p>Важно понимать, что модель <strong>не претендует на полное воспроизведение реальности</strong> по двум причинам: она строится на определенных явно сформулированных допущениях (однородность ткани, пренебрежение отдельными регуляторными контурами, усреднение по популяции) и предназначена для решения лишь ограниченногокласса задач — объяснения механизмов, прогноза исходов, оптимизации вмешательств или проверки гипотез.</p>
 </section>
@@ -197,7 +199,7 @@ E=mc^2
 <li><p><strong>Обыкновенные дифференциальные уравнения (ОДУ).</strong> Большинство рассмотренных моделей (экспоненциальный и логистический рост, SIR/SEIR, фармакокинетика, модели опухоли, глюкоза–инсулин) формулируются в виде систем ОДУ первого порядка. По ходу изложения вы получите базовое понимание таких понятий как: решение, начальные условия, устойчивость, фазовые траектории.</p>
 <ul>
 <li>Большая часть этих понятий очень наглядная. Например, что такое решение дифференциального уравнения? Это и есть нужный нам результат моделирования: скажем, сколько больных заболеет гриппом по дням недели, если мы смоделировали скорости заболевания и выздоровления.</li>
-<li><span class="math inline">\(F=ma\)</span> - известный второй закон Ньютона является не просто дифференциальным уравнением, а уравнением второго порядка, потому что <span class="math inline">\(a\)</span> - это ускорение, а оно - первая производная по времени от скорости и вторая - от координаты, то есть <span class="math inline">\(a=\dot{v}=\dot{\dot{x}}=\frac{d^2x}{dt^2}\)</span>.</li>
+<li><span class="math inline">\(F=ma\)</span> - известный второй закон Ньютона является не просто дифференциальным уравнением, а уравнением второго порядка, потому что <span class="math inline">\(a\)</span> - это ускорение, а оно - первая производная по времени от скорости и вторая - от координаты, то есть <span class="math inline">\(a=\dot{v}=\ddot{x}=\frac{d^2x}{dt^2}\)</span>.</li>
 </ul></li>
 <li><p><strong>Элементы линейной алгебры.</strong> Векторы состояний, матрицы параметров, собственные числа и собственные векторы возникают при анализе устойчивости стационарных состояний и при работе с многокамерными моделями.</p></li>
 <li><p><strong>Теория вероятностей и математическая статистика.</strong> Для стохастических моделей рождения–гибели, оценки параметров по экспериментальным данным, построения доверительных интервалов и проверки гипотез необходимы базовые понятия распределений, случайных величин, оценок параметров и статистических тестов.</p></li>
@@ -222,7 +224,10 @@ E=mc^2
 <p>В данном пособии в качестве основного инструмента выбран язык программирования <strong>Julia</strong>. Это решение обусловлено сочетанием требований учебной задачи, научных расчётов и долгосрочной воспроизводимости проектов.</p>
 <ul>
 <li><p><strong>Высокая производительность при удобстве высокого уровня.</strong> Julia компилируется «на лету» (JIT-компиляция) и обеспечивает скорость, близкую к C/Fortran, при синтаксисе, сопоставимом по удобству с Python или MATLAB. Это позволяет студентам и исследователям писать понятный код без потери эффективности при работе с большими моделями и длительными вычислительными экспериментами.</p></li>
-<li><p>Вот простая ячейка с расчетом в Julia:</p></li>
+<li><p>Вот простая ячейка с расчетом в Julia:</p>
+<ul>
+<li>Что она делает? Рассчитывает очень сложное выражение <span class="math inline">\(2+2\)</span>. Затем выводит результат на экран (часто говорят “консоль”) с помощью команды <code>println</code> и мы видим ответ 4.</li>
+</ul></li>
 </ul>
 <div id="2" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="fl">2</span><span class="op">+</span><span class="fl">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -230,6 +235,7 @@ E=mc^2
 <pre><code>4</code></pre>
 </div>
 </div>
+<p>Еще один пример, более сложный. Все, что начинается с символа # - это комментарии, которые поясняют нам, читателям, что делает определенная часть кода. Для понимания остальной части кода следует объяснить, что Julia - это экосистема. Она включает как сам более-менее универсальный язык, так и множество пакетов (иногда их также называют модулями или библиотеками) которые решают более узкие задачи. В частности, строки ниже подключают менеджер пакетов (using Pkg), а этот менеджер выводит список пакетов текущего проекта на экран командой Pkg.status().</p>
 <div id="4" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Выведет точный путь к используемому файлу Project.toml</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Активный Project.toml: "</span>, <span class="bu">Base</span>.<span class="fu">active_project</span>())</span>
@@ -239,8 +245,8 @@ E=mc^2
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">Pkg</span>.<span class="fu">status</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <div class="ansi-escaped-output">
-<pre>Активный Project.toml: /home/alex/Документы/biomedical-modeling-julia/Project.toml
-<span class="ansi-green-fg ansi-bold">Status</span> `~/Документы/biomedical-modeling-julia/Project.toml`
+<pre>Активный Project.toml: C:\Users\alex_\biomedical-moderling\biomedical-modeling-julia\Project.toml
+<span class="ansi-green-fg ansi-bold">Status</span> `C:\Users\alex_\biomedical-moderling\biomedical-modeling-julia\Project.toml`
   <span class="ansi-bright-black-fg">[336ed68f] </span>CSV v1.1.0
   <span class="ansi-bright-black-fg">[13f3f980] </span>CairoMakie v0.15.15
   <span class="ansi-bright-black-fg">[a93c6f00] </span>DataFrames v1.8.2
@@ -248,9 +254,9 @@ E=mc^2
   <span class="ansi-bright-black-fg">[31c24e10] </span>Distributions v0.25.131
   <span class="ansi-bright-black-fg">[7073ff75] </span>IJulia v1.34.4
   <span class="ansi-bright-black-fg">[033835bb] </span>JLD2 v0.6.7
-  <span class="ansi-bright-black-fg">[682c06a0] </span>JSON v1.9.0
+<span class="ansi-green-fg">⌃</span> <span class="ansi-bright-black-fg">[682c06a0] </span>JSON v1.9.0
   <span class="ansi-bright-black-fg">[b964fa9f] </span>LaTeXStrings v1.4.1
-  <span class="ansi-bright-black-fg">[961ee093] </span>ModelingToolkit v11.45.1
+<span class="ansi-green-fg">⌃</span> <span class="ansi-bright-black-fg">[961ee093] </span>ModelingToolkit v11.45.1
   <span class="ansi-bright-black-fg">[1dea7af3] </span>OrdinaryDiffEq v7.8.1
   <span class="ansi-bright-black-fg">[ccf2f8ad] </span>PlotThemes v3.3.0
   <span class="ansi-bright-black-fg">[91a5bcdd] </span>Plots v1.41.7
@@ -258,6 +264,7 @@ E=mc^2
   <span class="ansi-bright-black-fg">[2913bbd2] </span>StatsBase v0.34.13
   <span class="ansi-bright-black-fg">[fdbf4ff8] </span>XLSX v0.12.4
   <span class="ansi-bright-black-fg">[8dfed614] </span>Test v1.11.0
+<span class="ansi-cyan-fg ansi-bold">Info</span> Packages marked with <span class="ansi-green-fg">⌃</span> have new versions available and may be upgradable.
 </pre>
 </div>
 </div>
@@ -302,20 +309,118 @@ E=mc^2
 </section>
 <section id="как-подготовиться-к-работе" class="level1">
 <h1>Как подготовиться к работе</h1>
+<p>Перед началом работы с пособием рекомендуется обеспечить минимально необходимую техническую и организационную инфраструктуру. Ниже приведены требования и рекомендации, ориентированные в первую очередь на операционную систему Windows 11; для других систем (macOS, Linux) даны краткие указания.</p>
+<ul>
+<li>В отличии от многих других “свободных” систем программирования, экосистема Julia остается доступной в России без ограничений.</li>
+</ul>
+<p>Автор настотельно рекомендует:</p>
+<ol type="1">
+<li><p>Работать в среде Windows11x64, причем имя компьютера и имя пользователя должно быть набрано только латиницей без пробелов и специальных символов</p></li>
+<li><p>Желательно создать директорию под свои эксперименты и сохранять свою работу в этой директории или ее поддиректориях</p></li>
+<li><p>Желательно соблюдать определенную структуру папок. Часто имеет смысл работать в основной папке (Project1), сохранять результаты в подпапке Results, картинки в Figures а отчеты и т.п. в папке Reports, хотя сам автор далеко не всегда следует этому порядку.</p></li>
+<li><p>Желательно делать копии своей работы. Можно архивировать свои проекты, но гораздо более удобным является создание репозитория Git</p></li>
+<li><p>Существуют разные версии кода, которые может выполнить Julia. Чаще всего это обычные скрипты (текстовые файлы jl), но для интерактивных работ лучше подходят блокноты Pluto. Для расчетов в режиме калькулятора существует консоль, которая позволяет выполнить расчеты шаг за шагом (непосредственно в терминале).</p></li>
+</ol>
+<section id="технические-требования" class="level2">
+<h2 class="anchored" data-anchor-id="технические-требования">Технические требования</h2>
+<p>Для выполнения всех вычислительных экспериментов, описанных в пособии, достаточно стандартного современного компьютера:</p>
+<ul>
+<li><p><strong>Операционная система:</strong> Windows 11 (основная целевая платформа); также возможны macOS 10.15 или новее, распространённые дистрибутивы Linux (Ubuntu, Fedora, Debian и др.).</p></li>
+<li><p><strong>Процессор:</strong> любой 64-разрядный процессор (x86_64); для большинства моделей достаточно 2–4 ядер.</p></li>
+<li><p><strong>Оперативная память:</strong> минимум 4 ГБ, комфортно — 8 ГБ и более (некоторые эксперименты с оптимизацией параметров или стохастическим моделированием могут требовать больше памяти).</p></li>
+<li><p><strong>Свободное место на диске:</strong> около 1–2 ГБ для самой Julia, пакетов и рабочих файлов (в зависимости от количества устанавливаемых пакетов и объёма данных).</p></li>
+<li><p><strong>Интернет-соединение:</strong> необходимо для первоначальной установки Julia, пакетов и документации; дальнейшая работа возможна офлайн.</p></li>
+</ul>
+</section>
+<section id="что-желательно-знать-перед-началом" class="level2">
+<h2 class="anchored" data-anchor-id="что-желательно-знать-перед-началом">Что желательно знать перед началом</h2>
+<p>Для комфортной работы с пособием полезно (но не строго обязательно) иметь базовые представления о:</p>
+<ul>
+<li><p><strong>Элементах программирования:</strong> переменные, типы данных, функции, циклы, условия — на уровне любого вводного курса (Python, Pascal, C, MATLAB и др.).</p></li>
+<li><p><strong>Работе с командной строкой/терминалом:</strong> запуск программ, навигация по файловой системе, установка пакетов — на минимальном уровне.</p></li>
+<li><p><strong>Основах математики:</strong> производная и интеграл, простейшие дифференциальные уравнения, элементы теории вероятностей — эти темы будут систематически напоминаться в контексте моделей .</p></li>
+</ul>
+<p>Если какой-то из этих пунктов вызывает затруднения, рекомендуется параллельно с работой над пособием обращаться к вводным материалам по Julia и математике; в тексте будут даны ссылки на соответствующие разделы.</p>
+</section>
 <section id="как-установить-julia" class="level2">
 <h2 class="anchored" data-anchor-id="как-установить-julia">Как установить Julia</h2>
+<p>Ниже приведены пошаговые инструкции для установки Julia на Windows 11. Для macOS и Linux даны краткие указания в конце раздела.</p>
+<section id="способ-1.-через-microsoft-store-рекомендуется-для-windows-11" class="level3">
+<h3 class="anchored" data-anchor-id="способ-1.-через-microsoft-store-рекомендуется-для-windows-11">Способ 1. Через Microsoft Store (рекомендуется для Windows 11)</h3>
+<ol type="1">
+<li><p>Откройте <strong>Microsoft Store</strong> (меню «Пуск» → значок сумки с логотипом Store).</p></li>
+<li><p>В строке поиска введите «Julia» и выберите официальное приложение <strong>Julia</strong> (издатель — Julia Computing).</p></li>
+<li><p>Нажмите кнопку <strong>«Установить»</strong> / <strong>«Get»</strong> и дождитесь завершения установки.</p></li>
+<li><p>После установки откройте <strong>PowerShell</strong> или <strong>Командную строку</strong> (cmd) и выполните:</p>
+<pre><code>julia --version</code></pre>
+<p>Если отобразится номер версии (например, <code>julia version 1.13.1</code>), установка прошла успешно.</p></li>
+</ol>
+<p>Этот способ автоматически добавляет Julia в системный путь и упрощает обновление в будущем.</p>
+</section>
+<section id="способ-2.-через-winget-альтернатива-для-windows-11" class="level3">
+<h3 class="anchored" data-anchor-id="способ-2.-через-winget-альтернатива-для-windows-11">Способ 2. Через winget (альтернатива для Windows 11)</h3>
+<p>Если вы предпочитаете использовать менеджер пакетов <code>winget</code>, в PowerShell выполните:</p>
+<pre><code>winget install --name Julia --id 9NJNWW8PVKMN -e -s msstore</code></pre>
+<p>Эта команда установит ту же версию, что и через Microsoft Store.<a href="https://docs.julialang.org/en/v1/manual/installation/"><u>docs.julialang</u></a></p>
+</section>
+<section id="способ-3.-через-официальный-msi-инсталлятор" class="level3">
+<h3 class="anchored" data-anchor-id="способ-3.-через-официальный-msi-инсталлятор">Способ 3. Через официальный MSI-инсталлятор</h3>
+<p>Этот способ удобен, если на вашем компьютере нет доступа к Microsoft Store или вы предпочитаете классический установщик.</p>
+<ol type="1">
+<li><p>Перейдите на страницу загрузок: &lt;https://julialang.org/downloads/&gt;.</p></li>
+<li><p>Скачайте 64-битный <strong>MSI-инсталлятор</strong> для Windows (файл вида <code>julia-1.13.1-win64.exe</code> или аналогичный).</p></li>
+<li><p>Запустите скачанный файл и следуйте инструкциям мастера установки.</p></li>
+<li><p>На одном из этапов установки обязательно отметьте опцию <strong>«Add Julia to PATH»</strong> (Добавить Julia в переменную PATH), чтобы команда <code>julia</code> была доступна из любой командной строки.</p></li>
+<li><p>Завершите установку.</p></li>
+</ol>
+<p><strong>Проверка установки:</strong></p>
+<ol type="1">
+<li><p>Откройте <strong>PowerShell</strong> или <strong>Командную строку</strong>.</p></li>
+<li><p>Повторите как показано выше команду:</p>
+<pre><code>julia --version</code></pre>
+<p>Должна отобразиться версия Julia.</p></li>
+</ol>
+</section>
 </section>
 <section id="что-еще-нужно-можно-установить" class="level2">
 <h2 class="anchored" data-anchor-id="что-еще-нужно-можно-установить">Что еще нужно (можно) установить</h2>
+<p>Вы можете использовать только блокнот, чтобы писать простые программы на Julia. Это не самый продуктивный путь, да и работа в таком режиме будет не самой продуктивной. Можно использовать немного более “продвинутые” редакторы, например, Notepad++, Neovim, Emacs</p>
+<table class="caption-top table">
+<caption>Внений вид редакторов</caption>
+<colgroup>
+<col style="width: 34%">
+<col style="width: 55%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Neovim</th>
+<th>Notepad++</th>
+<th>Emacs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="images/paste-1.png" class="img-fluid"></td>
+<td><img src="images/paste-2.png" class="img-fluid"></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Работает в терминале</td>
+<td>Нет специального режима работы с Julia</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="первые-шаги---запускаем-julia-в-терминале" class="level2">
-<h2 class="anchored" data-anchor-id="первые-шаги---запускаем-julia-в-терминале">Первые шаги - запускаем Julia в терминале</h2>
+<section id="первый-шаг---запускаем-julia-в-терминале" class="level2">
+<h2 class="anchored" data-anchor-id="первый-шаг---запускаем-julia-в-терминале">Первый шаг - запускаем Julia в терминале</h2>
 </section>
-<section id="вторые-шаги---запускаем-julia-в-ide-visual-studio-code" class="level2">
-<h2 class="anchored" data-anchor-id="вторые-шаги---запускаем-julia-в-ide-visual-studio-code">Вторые шаги - запускаем Julia в IDE (Visual Studio Code)</h2>
+<section id="второй-шаг---запускаем-julia-в-ide-visual-studio-code" class="level2">
+<h2 class="anchored" data-anchor-id="второй-шаг---запускаем-julia-в-ide-visual-studio-code">Второй шаг - запускаем Julia в IDE (Visual Studio Code)</h2>
 </section>
-<section id="третьи-шаги---запускаем-julia-в-pluto" class="level2">
-<h2 class="anchored" data-anchor-id="третьи-шаги---запускаем-julia-в-pluto">Третьи шаги - запускаем Julia в Pluto</h2>
+<section id="третий-шаг---запускаем-julia-в-pluto" class="level2">
+<h2 class="anchored" data-anchor-id="третий-шаг---запускаем-julia-в-pluto">Третий шаг - запускаем Julia в Pluto</h2>
 </section>
 </section>
 
