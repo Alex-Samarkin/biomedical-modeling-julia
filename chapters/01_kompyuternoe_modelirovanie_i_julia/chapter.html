@@ -133,7 +133,12 @@ window.Quarto = {
   <li><a href="#способ-2.-через-winget-альтернатива-для-windows-11" id="toc-способ-2.-через-winget-альтернатива-для-windows-11" class="nav-link" data-scroll-target="#способ-2.-через-winget-альтернатива-для-windows-11">Способ 2. Через winget (альтернатива для Windows 11)</a></li>
   <li><a href="#способ-3.-через-официальный-msi-инсталлятор" id="toc-способ-3.-через-официальный-msi-инсталлятор" class="nav-link" data-scroll-target="#способ-3.-через-официальный-msi-инсталлятор">Способ 3. Через официальный MSI-инсталлятор</a></li>
   </ul></li>
-  <li><a href="#что-еще-нужно-можно-установить" id="toc-что-еще-нужно-можно-установить" class="nav-link" data-scroll-target="#что-еще-нужно-можно-установить">Что еще нужно (можно) установить</a></li>
+  <li><a href="#что-еще-нужно-можно-установить" id="toc-что-еще-нужно-можно-установить" class="nav-link" data-scroll-target="#что-еще-нужно-можно-установить">Что еще нужно (можно) установить</a>
+  <ul class="collapse">
+  <li><a href="#минимальный-набор-обязательно" id="toc-минимальный-набор-обязательно" class="nav-link" data-scroll-target="#минимальный-набор-обязательно">Минимальный набор (обязательно)</a></li>
+  <li><a href="#пакеты-julia-для-работы-с-моделями" id="toc-пакеты-julia-для-работы-с-моделями" class="nav-link" data-scroll-target="#пакеты-julia-для-работы-с-моделями">2. Пакеты Julia для работы с моделями</a></li>
+  <li><a href="#расширенный-набор-рекомендуется" id="toc-расширенный-набор-рекомендуется" class="nav-link" data-scroll-target="#расширенный-набор-рекомендуется">Расширенный набор (рекомендуется)</a></li>
+  </ul></li>
   <li><a href="#первый-шаг---запускаем-julia-в-терминале" id="toc-первый-шаг---запускаем-julia-в-терминале" class="nav-link" data-scroll-target="#первый-шаг---запускаем-julia-в-терминале">Первый шаг - запускаем Julia в терминале</a></li>
   <li><a href="#второй-шаг---запускаем-julia-в-ide-visual-studio-code" id="toc-второй-шаг---запускаем-julia-в-ide-visual-studio-code" class="nav-link" data-scroll-target="#второй-шаг---запускаем-julia-в-ide-visual-studio-code">Второй шаг - запускаем Julia в IDE (Visual Studio Code)</a></li>
   <li><a href="#третий-шаг---запускаем-julia-в-pluto" id="toc-третий-шаг---запускаем-julia-в-pluto" class="nav-link" data-scroll-target="#третий-шаг---запускаем-julia-в-pluto">Третий шаг - запускаем Julia в Pluto</a></li>
@@ -236,13 +241,15 @@ window.Quarto = {
 </div>
 </div>
 <p>Еще один пример, более сложный. Все, что начинается с символа # - это комментарии, которые поясняют нам, читателям, что делает определенная часть кода. Для понимания остальной части кода следует объяснить, что Julia - это экосистема. Она включает как сам более-менее универсальный язык, так и множество пакетов (иногда их также называют модулями или библиотеками) которые решают более узкие задачи. В частности, строки ниже подключают менеджер пакетов (using Pkg), а этот менеджер выводит список пакетов текущего проекта на экран командой Pkg.status().</p>
+<p>Возникает резонный вопрос: как получить эти пакеты? Если у вас есть доступ к сети интернет, то их надо скачть и подключить к вашей версии Julia. Вот этим и занимается менеджер пакетов. Вы отдаете ему команду: добавь к моей системе определенные пакеты, и менеджер (Pkg) сам, без вашего участия выполняет остальную работу</p>
 <div id="4" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Выведет точный путь к используемому файлу Project.toml</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Активный Project.toml: "</span>, <span class="bu">Base</span>.<span class="fu">active_project</span>())</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Выведет информацию об окружении и активных пакетах</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Pkg</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">Pkg</span>.<span class="fu">status</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Выведет точный путь к используемому файлу Project.toml</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Активный Project.toml: "</span>, <span class="bu">Base</span>.<span class="fu">active_project</span>())</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Выведет информацию об окружении и активных пакетах</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Pkg</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">Pkg</span>.<span class="fu">status</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <div class="ansi-escaped-output">
 <pre>Активный Project.toml: C:\Users\alex_\biomedical-moderling\biomedical-modeling-julia\Project.toml
@@ -257,12 +264,14 @@ window.Quarto = {
 <span class="ansi-green-fg">⌃</span> <span class="ansi-bright-black-fg">[682c06a0] </span>JSON v1.9.0
   <span class="ansi-bright-black-fg">[b964fa9f] </span>LaTeXStrings v1.4.1
 <span class="ansi-green-fg">⌃</span> <span class="ansi-bright-black-fg">[961ee093] </span>ModelingToolkit v11.45.1
+  <span class="ansi-bright-black-fg">[7f7a1694] </span>Optimization v5.9.1
   <span class="ansi-bright-black-fg">[1dea7af3] </span>OrdinaryDiffEq v7.8.1
   <span class="ansi-bright-black-fg">[ccf2f8ad] </span>PlotThemes v3.3.0
   <span class="ansi-bright-black-fg">[91a5bcdd] </span>Plots v1.41.7
   <span class="ansi-bright-black-fg">[c3e4b0f8] </span>Pluto v1.0.3
+  <span class="ansi-bright-black-fg">[1ed8b502] </span>SciMLSensitivity v7.119.12
   <span class="ansi-bright-black-fg">[2913bbd2] </span>StatsBase v0.34.13
-  <span class="ansi-bright-black-fg">[fdbf4ff8] </span>XLSX v0.12.4
+<span class="ansi-green-fg">⌃</span> <span class="ansi-bright-black-fg">[fdbf4ff8] </span>XLSX v0.12.4
   <span class="ansi-bright-black-fg">[8dfed614] </span>Test v1.11.0
 <span class="ansi-cyan-fg ansi-bold">Info</span> Packages marked with <span class="ansi-green-fg">⌃</span> have new versions available and may be upgradable.
 </pre>
@@ -270,7 +279,10 @@ window.Quarto = {
 </div>
 </div>
 <ul>
-<li><p><strong>Специализированная экосистема для научного моделирования.</strong> Пакеты <strong>DifferentialEquations.jl</strong>, <strong>ModelingToolkit.jl</strong>, <strong>SciMLSensitivity.jl</strong>, <strong>Optimization.jl</strong> предоставляют современные решатели ОДУ, ДАУ, стохастических дифференциальных уравнений, средства автоматического дифференцирования, оценки параметров и оптимизации, что критично для биомедицинских задач (подбор параметров по данным, чувствительность, обратные задачи).</p></li>
+<li><strong>Специализированная экосистема для научного моделирования.</strong> Пакеты <strong>DifferentialEquations.jl</strong>, <strong>ModelingToolkit.jl</strong>, <strong>SciMLSensitivity.jl</strong>, <strong>Optimization.jl</strong> предоставляют современные решатели ОДУ, ДАУ, стохастических дифференциальных уравнений, средства автоматического дифференцирования, оценки параметров и оптимизации, что критично для биомедицинских задач (подбор параметров по данным, чувствительность, обратные задачи).</li>
+</ul>
+<p>Большинство файлов, с которыми работает Julia, имеют расширение jl - julia language. Некоторые из них можно установить из сети интеренет и использовать в своих программах, но для этого надо сказать Julia: я подключаю этот пакет. Это делается строчкой using, например, <code>using Pkg</code> - использовать в программе модуль Pkg. <strong>Важно:</strong> регистр символов надо соблюдать, то есть <code>using Pkg</code> и <code>using pkg</code> - это разные команды, первая правильная, вторая - нет.</p>
+<ul>
 <li><p><strong>Удобство для обучения.</strong> Читаемый синтаксис, интерактивная работа в REPL и Jupyter-ноутбуках, богатая система документации и сообщений об ошибках делают Julia подходящим языком для студентов медицинских и инженерных специальностей, не имеющих глубокой подготовки в программировании.</p></li>
 <li><p><strong>Воспроизводимость и открытость.</strong> Julia и основные научные пакеты имеют открытый исходный код, что упрощает проверку, модификацию и долгосрочную поддержку учебных и исследовательских проектов. Возможность фиксировать версии пакетов и окружения способствует воспроизводимости вычислительных экспериментов — ключевому требованию современной науки.</p></li>
 <li><p><strong>Интеграция с другими языками.</strong> Julia легко взаимодействует с Python, R, C/Fortran, что позволяет использовать существующие библиотеки, данные и наработки, не переписывая их полностью.</p></li>
@@ -281,7 +293,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="как-организована-эта-книга">Как организована эта книга</h2>
 <p>Настоящее пособие построено вокруг <strong>избранных моделей</strong>, и не является ни справочником по Julia, ни энциклопедией всех известных биомедицинских моделей. Каждая глава следует единой логической структуре, отражающей полный цикл работы с моделью:</p>
 <ol type="1">
-<li><p><strong>Биомедицинская задача.</strong> Формулировка клинической, физиологической или исследовательской проблемы, которую призвана решить модель (например, прогноз распространения инфекции, оценка режима дозирования препарата, анализ роста опухоли).</p></li>
+<li><p><strong>Биомедицинская задача.</strong> Формулировка клинической, физиологической или исследовательской проблемы, которую призвана решить модель (например, прогноз распространения инфекции, оценка режима дозирования препарата, анализ роста опухоли). Автор сознательно допускает некоторые упрощения в формулировках и пропускает “самоочевидные” формулировки.</p></li>
 <li><p><strong>Допущения.</strong> По возможности явное перечисление упрощений, на которых строится модель (однородность популяции, пренебрежение отдельными регуляторными контурами, детерминированность vs стохастичность), с обсуждением их биологического смысла и границ применимости. Тем не менее, автор больше заинтересован в переходе к моделированию, чем к математически строгому описанию всех возможных ограничений.</p></li>
 <li><p><strong>Математическая модель.</strong> Формальная запись модели в виде уравнений, определение переменных, параметров, начальных условий и единиц измерения; краткое обсуждение качественных свойств (стационарные состояния, устойчивость, типичные режимы динамики). Автор стремился, насколько возможно, предоставлять полную информацию такого рода, однако часто дает сссылки на предыдущие модели , чтобы показать эволюцию развития отдельных моделей более четко.</p></li>
 <li><p><strong>Реализация на Julia.</strong> Пошаговое построение кода с использованием пакетов DifferentialEquations.jl, ModelingToolkit.jl и других; акцент на читаемости, воспроизводимости и связи каждой строки кода с биомедицинским смыслом. Зачастую, вместо оптимального, но плохо читаемого кода, автор приводит более длинные версии расчетных модулей.</p></li>
@@ -313,11 +325,11 @@ window.Quarto = {
 <ul>
 <li>В отличии от многих других “свободных” систем программирования, экосистема Julia остается доступной в России без ограничений.</li>
 </ul>
-<p>Автор настотельно рекомендует:</p>
+<p>Автор настоятельно рекомендует:</p>
 <ol type="1">
-<li><p>Работать в среде Windows11x64, причем имя компьютера и имя пользователя должно быть набрано только латиницей без пробелов и специальных символов</p></li>
-<li><p>Желательно создать директорию под свои эксперименты и сохранять свою работу в этой директории или ее поддиректориях</p></li>
-<li><p>Желательно соблюдать определенную структуру папок. Часто имеет смысл работать в основной папке (Project1), сохранять результаты в подпапке Results, картинки в Figures а отчеты и т.п. в папке Reports, хотя сам автор далеко не всегда следует этому порядку.</p></li>
+<li><p>Работать в среде Windows11x64, причем <strong>имя компьютера и имя пользователя должно быть набрано только латиницей без пробелов и специальных символов</strong></p></li>
+<li><p>Желательно <strong>создать директорию под свои эксперименты</strong> и сохранять свою работу в этой директории или ее поддиректориях</p></li>
+<li><p>Желательно с<strong>облюдать определенную структуру папок</strong>. Часто имеет смысл работать в основной папке (Project1), сохранять результаты в подпапке Results, картинки в Figures а отчеты и т.п. в папке Reports, хотя сам автор далеко не всегда следует этому порядку.</p></li>
 <li><p>Желательно делать копии своей работы. Можно архивировать свои проекты, но гораздо более удобным является создание репозитория Git</p></li>
 <li><p>Существуют разные версии кода, которые может выполнить Julia. Чаще всего это обычные скрипты (текстовые файлы jl), но для интерактивных работ лучше подходят блокноты Pluto. Для расчетов в режиме калькулятора существует консоль, которая позволяет выполнить расчеты шаг за шагом (непосредственно в терминале).</p></li>
 </ol>
@@ -334,7 +346,7 @@ window.Quarto = {
 </section>
 <section id="что-желательно-знать-перед-началом" class="level2">
 <h2 class="anchored" data-anchor-id="что-желательно-знать-перед-началом">Что желательно знать перед началом</h2>
-<p>Для комфортной работы с пособием полезно (но не строго обязательно) иметь базовые представления о:</p>
+<p>Для комфортной работы с пособием полезно (но не обязательно) иметь базовые представления о:</p>
 <ul>
 <li><p><strong>Элементах программирования:</strong> переменные, типы данных, функции, циклы, условия — на уровне любого вводного курса (Python, Pascal, C, MATLAB и др.).</p></li>
 <li><p><strong>Работе с командной строкой/терминалом:</strong> запуск программ, навигация по файловой системе, установка пакетов — на минимальном уровне.</p></li>
@@ -386,11 +398,11 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="что-еще-нужно-можно-установить">Что еще нужно (можно) установить</h2>
 <p>Вы можете использовать только блокнот, чтобы писать простые программы на Julia. Это не самый продуктивный путь, да и работа в таком режиме будет не самой продуктивной. Можно использовать немного более “продвинутые” редакторы, например, Notepad++, Neovim, Emacs</p>
 <table class="caption-top table">
-<caption>Внений вид редакторов</caption>
+<caption>Внешний вид редакторов</caption>
 <colgroup>
-<col style="width: 34%">
-<col style="width: 55%">
-<col style="width: 9%">
+<col style="width: 36%">
+<col style="width: 37%">
+<col style="width: 26%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -402,8 +414,8 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td><img src="images/paste-1.png" class="img-fluid"></td>
-<td><img src="images/paste-2.png" class="img-fluid"></td>
-<td></td>
+<td><img src="images/paste-2.png" class="img-fluid" width="287"></td>
+<td><img src="images/paste-3.png" class="img-fluid" width="192"></td>
 </tr>
 <tr class="even">
 <td>Работает в терминале</td>
@@ -412,6 +424,82 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+<p>Помимо самой Julia, для комфортной работы с пособием полезно установить ряд дополнительных инструментов: редактор кода, поддержку Jupyter-ноутбуков, графические драйверы и некоторые системные утилиты. Ниже приведён минимальный и расширенный наборы, ориентированные на Windows 11.</p>
+<section id="минимальный-набор-обязательно" class="level3">
+<h3 class="anchored" data-anchor-id="минимальный-набор-обязательно">Минимальный набор (обязательно)</h3>
+<section id="редактор-кода-с-поддержкой-julia" class="level4">
+<h4 class="anchored" data-anchor-id="редактор-кода-с-поддержкой-julia">1. Редактор кода с поддержкой Julia</h4>
+<p>Для написания и отладки скриптов Julia рекомендуется использовать <strong>Visual Studio Code (VS Code)</strong> — бесплатный, кроссплатформенный редактор с отличным расширением для Julia.</p>
+<p><strong>Установка VS Code и расширения Julia (Windows 11):</strong></p>
+<ol type="1">
+<li><p>Скачайте установщик VS Code с официального сайта: &lt;https://code.visualstudio.com/&gt;.</p></li>
+<li><p>Запустите скачанный файл и следуйте инструкциям мастера установки (рекомендуется оставить опцию «Добавить в PATH» и «Зарегистрировать как редактор для файлов .jl»).</p></li>
+<li><p>Запустите VS Code.</p></li>
+<li><p>Откройте панель расширений (иконка с квадратами слева или <code>Ctrl+Shift+X</code>).</p></li>
+<li><p>В поиске введите «Julia» и установите официальное расширение <strong>Julia</strong> (автор — Julia Language).<a href="https://www.rudn.ru/sveden/files/Progr_Mathmod_v_biol_i_med_NMTmd03r_2021.pdf"><u>rudn</u></a></p></li>
+<li><p>После установки перезапустите VS Code.</p></li>
+</ol>
+<p><img src="images/paste-4.png" class="img-fluid"></p>
+<p>Это расширение обеспечивает:</p>
+<ul>
+<li><p>подсветку синтаксиса Julia;</p></li>
+<li><p>запуск кода непосредственно из редактора;</p></li>
+<li><p>отладку;</p></li>
+<li><p>интеграцию с REPL;</p></li>
+<li><p>работу с ноутбуками <code>.jl</code> и <code>.ipyn</code></p></li>
+</ul>
+</section>
+</section>
+<section id="пакеты-julia-для-работы-с-моделями" class="level3">
+<h3 class="anchored" data-anchor-id="пакеты-julia-для-работы-с-моделями">2. Пакеты Julia для работы с моделями</h3>
+<p>После установки Julia и редактора необходимо установить базовый набор пакетов, которые будут активно использоваться в пособии.</p>
+<p>Запустите терминал или командную строку. Напечатайте в строке-прпиглашении julia.</p>
+<p>Это приведет к открытию REPL Julia (диалоговой сркды примерно такого вида, как показано ниже) и выполните:</p>
+<pre><code>import Pkg
+
+Pkg.add([
+    "DifferentialEquations",
+    "OrdinaryDiffEq",
+    "ModelingToolkit",
+    "DataFrames",
+    "CSV",
+    "Distributions",
+    "StatsBase",
+    "CairoMakie",
+    "Random",
+    "SciMLSensitivity",
+    "Optimization",
+    "OptimizationOptimJL"
+])</code></pre>
+<p>Эти пакеты обеспечивают:</p>
+<ul>
+<li><p>численное решение ОДУ и других дифференциальных уравнений (<code>DifferentialEquations</code>, <code>OrdinaryDiffEq</code>);</p></li>
+<li><p>символьное моделирование и автоматическое дифференцирование (<code>ModelingToolkit</code>, <code>SciMLSensitivity</code>);</p></li>
+<li><p>работу с табличными данными (<code>DataFrames</code>, <code>CSV</code>);</p></li>
+<li><p>вероятностные распределения и статистику (<code>Distributions</code>, <code>StatsBase</code>);</p></li>
+<li><p>построение графиков (<code>CairoMakie</code>);</p></li>
+<li><p>генерацию случайных чисел и воспроизводимость экспериментов (<code>Random</code>);</p></li>
+<li><p>оценку параметров и оптимизацию (<code>Optimization</code>, <code>OptimizationOptimJL</code>).<a href="https://docs.julialang.org/en/v1/manual/installation/"><u>docs.julialang</u></a></p></li>
+</ul>
+<p>После установки можно проверить статус пакетов:</p>
+<p><img src="images/paste-5.png" class="img-fluid"></p>
+</section>
+<section id="расширенный-набор-рекомендуется" class="level3">
+<h3 class="anchored" data-anchor-id="расширенный-набор-рекомендуется">Расширенный набор (рекомендуется)</h3>
+<section id="jupyter-ноутбуки-с-поддержкой-julia" class="level4">
+<h4 class="anchored" data-anchor-id="jupyter-ноутбуки-с-поддержкой-julia">1. Jupyter-ноутбуки с поддержкой Julia</h4>
+<p>Если вы предпочитаете работать в формате ноутбуков (код, текст и графики в одном документе), полезно установить ядро Julia (IJulia) и интерактивный блокнот Pluto.</p>
+<p><strong>Установка IJulia и Pluto(Windows 11):</strong></p>
+<p>Запустите, если вы этого еще не сделали терминал. В терминале, если это нужно, наберите <code>julia</code>.</p>
+<p>В терминале введите:</p>
+<pre><code>using Pkg
+
+Pkg.add("IJulia")
+Pkg.add("Pluto")</code></pre>
+<p>Обе команды скачают необходимые пакеты из сети интернет и установят все необходимое. Если вы введете эти команды в терминале, вы увидите, как пакеты скачиваются и устанавливаются. Если вы повторите эти команды в дальнейшем, вы увидите, сообщение, аналогичное картинке (все пакеты установлены и делать ничего не надо).</p>
+<p><img src="images/paste-6.png" class="img-fluid"></p>
+</section>
+</section>
 </section>
 <section id="первый-шаг---запускаем-julia-в-терминале" class="level2">
 <h2 class="anchored" data-anchor-id="первый-шаг---запускаем-julia-в-терминале">Первый шаг - запускаем Julia в терминале</h2>
