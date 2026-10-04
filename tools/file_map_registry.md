@@ -35,7 +35,7 @@
 - .gitignore :: Политика хранения: Project.toml и Manifest.toml отслеживаются; отслеживаются результаты `*.csv`, `*.svg`, `*.png`, `*.jld2`; игнорируются `*.xlsx`, `*.parquet`, `*.h5`, `*.mat`, медиафайлы, содержимое `results/logs/` и все кэши.
 - README.md :: Главная страница репозитория: назначение проекта, что уже готово, команды запуска и порядок обслуживания карты проекта (блок структуры обновляется скриптом).
 - FILES.md :: Эта карта проекта: полный список ключевых файлов и папок с комментариями. Файл генерируется, править его вручную не нужно — правьте `tools/file_map_registry.md`.
-- AGENTS.md :: Постоянная память проекта для ИИ-ассистента: роль (инженер, к.т.н., математическое моделирование в биомедицине), аудитория и стиль текстов, требования к коду и комментариям, технологический стек, правила работы с артефактами карты проекта.
+- AGENTS.md :: Постоянная память проекта для ИИ-ассистента: границы работы над текстом (содержание `chapter.qmd` — только по явному запросу, при неоднозначности спрашивать), роль (инженер, к.т.н., математическое моделирование в биомедицине), аудитория и стиль текстов, требования к коду и комментариям, технологический стек, правила работы с артефактами карты проекта.
 - УЧАСТНИКИ ПОРЯДОК РАБОТЫ.docx :: Организационный документ: состав участников проекта и регламент совместной работы.
 - src/ :: Исходники Python-пакета-обёртки.
 - src/biomedical_modeling_julia/ :: Пакет `biomedical_modeling_julia`, указанный как точка входа в pyproject.toml.
@@ -44,7 +44,7 @@
 - tools/README.md :: Инструкция по обслуживанию карты: команды запуска, формат реестра, режим проверки и плановый интервал обновления.
 - tools/update_file_map.py :: Генератор карты проекта: читает реестр, обходит дерево репозитория, считает размеры и даты, пишет FILES.md и блок структуры в README.md. Зависимостей нет, только стандартная библиотека Python.
 - tools/file_map_registry.md :: Этот реестр: пути и текстовые пояснения, которые попадают в карту.
-- chapters/ :: Все главы пособия. Одна папка — одна глава; сейчас создана только глава 01.
+- chapters/ :: Все главы пособия. Одна папка — одна глава; сейчас созданы главы 01 и 02.
 
 ## Глава 01 — паспорт, сборка и артефакты
 
@@ -118,6 +118,30 @@
 - chapters/01_kompyuternoe_modelirovanie_i_julia/resources/videos/ :: Видеоматериалы.
 - chapters/01_kompyuternoe_modelirovanie_i_julia/resources/web/ :: Полезные веб-ресурсы.
 - !chapters/01_kompyuternoe_modelirovanie_i_julia/images/ :: Скриншоты для вставки в главу (`paste-1.png` … `paste-12.png`; самый крупный — `paste-8.png`, ~204 КБ).
+
+## Глава 02 — паспорт, текст и структура
+
+- chapters/02_prostye_modeli_osnovy_chislennykh_metodov/ :: Глава 02 «Простые модели. Основы численных методов»: текст главы, каркас скриптов и типовое дерево каталогов (text, julia, pluto, data, results, figures, resources, references, teaching).
+- chapters/02_prostye_modeli_osnovy_chislennykh_metodov/_metadata.yaml :: Паспорт главы 02 (ID, номер, название, статус draft, автор — ПсковГУ, дата) и настройки вывода Quarto для HTML, Typst/PDF и DOCX — те же, что в главе 01, но с исправленными реквизитами главы.
+- chapters/02_prostye_modeli_osnovy_chislennykh_metodov/metadata.yaml :: Служебный паспорт, который создаёт генератор `init_chapter_interactive_v2.py` (ID, номер, название, дата, комментарий). Частично дублирует `_metadata.yaml`.
+- chapters/02_prostye_modeli_osnovy_chislennykh_metodov/chapter.qmd :: Главный содержательный исходник главы: введение, сквозные биомедицинские примеры (фармакокинетика, AUC, Михаэлис–Ментен), минимум Julia, бисекция/Ньютон/секущие, трапеции и Симпсон, численное дифференцирование, символьные методы, программа вычислительного эксперимента, интерпретация, ограничения, задания и ссылки на материалы. Править текст нужно прежде всего здесь.
+- chapters/02_prostye_modeli_osnovy_chislennykh_metodov/chapter.md :: Шаблон Markdown-версии главы с YAML-фронтматтером и навигацией по разделам.
+- chapters/02_prostye_modeli_osnovy_chislennykh_metodov/custom-reference.docx :: Эталонный документ Word со стилями для DOCX-вывода (`reference-doc` в `_metadata.yaml`).
+- chapters/02_prostye_modeli_osnovy_chislennykh_metodov/chapter.html :: Собранная HTML-версия главы. Генерируется Quarto, вручную не правится.
+- !chapters/02_prostye_modeli_osnovy_chislennykh_metodov/chapter_files/ :: Ресурсы HTML-рендера: Bootstrap, quarto-html, tippy, tabsets. Полностью генерируется, править не нужно.
+- chapters/02_prostye_modeli_osnovy_chislennykh_metodov/StartMe.jl :: Центральный узел главы: ищет корень проекта, объявляет константы `DIR_*`, создаёт каталоги, пишет журнал прогона и печатает конфигурацию.
+- chapters/02_prostye_modeli_osnovy_chislennykh_metodov/StartMe copy.jl :: Копия `StartMe.jl`, оставшаяся после копирования структуры главы 01. Рабочим входом не является, кандидат на удаление.
+- !chapters/02_prostye_modeli_osnovy_chislennykh_metodov/julia/ :: Каркас скриптов главы (main.jl, run_experiments.jl, make_figures.jl, tests/runtests.jl). Пока заглушки вокруг StartMe.jl: логика расчётов ещё не реализована.
+- chapters/02_prostye_modeli_osnovy_chislennykh_metodov/julia/bisection_demo.jl :: Пошаговая демонстрация метода бисекции (уравнение C0·exp(−kt) − C_МТК = 0): печатает таблицу шагов «старт, первые 4 шага, финиш», пишет полный журнал всех итераций в `results/tables/bisection_steps.csv` и строит рисунок из четырёх панелей (функция и корень, «лестница» отрезков [a; b], сходимость по аргументу, крупный план финиша) в `figures/svg` и `figures/png`.
+- chapters/02_prostye_modeli_osnovy_chislennykh_metodov/julia/newton_demo.jl :: Пошаговая демонстрация метода Ньютона для того же уравнения: печатает таблицу шагов «старт, первые 4 шага, финиш» (xₙ, f(xₙ), f′(xₙ), xₙ₊₁, Δx), пишет журнал в `results/tables/newton_steps.csv` и строит рисунок из четырёх панелей (касательные метода, переходы xₙ → xₙ₊₁, сходимость с проверкой квадратичного закона, крупный план финиша) в `figures/svg` и `figures/png`.
+- !chapters/02_prostye_modeli_osnovy_chislennykh_metodov/pluto/ :: Каркас блокнотов Pluto (01_main_model.jl, 02_experiment.jl) и README с напоминанием о корневом Julia-окружении.
+- !chapters/02_prostye_modeli_osnovy_chislennykh_metodov/text/ :: Смысловые блоки главы (шаблоны с одними заголовками). Содержательная часть пока живёт в `chapter.qmd`.
+- !chapters/02_prostye_modeli_osnovy_chislennykh_metodov/data/ :: Типовая структура данных с README-заглушками: raw, processed, metadata.
+- !chapters/02_prostye_modeli_osnovy_chislennykh_metodov/results/ :: Каталоги для таблиц результатов и журналов прогонов.
+- !chapters/02_prostye_modeli_osnovy_chislennykh_metodov/figures/ :: Каталоги для рисунков SVG и PNG.
+- !chapters/02_prostye_modeli_osnovy_chislennykh_metodov/resources/ :: Библиотека учебных материалов главы: books, papers, reading, videos, web.
+- !chapters/02_prostye_modeli_osnovy_chislennykh_metodov/references/ :: Источники главы: bibliography.bib, references_main.md, references_optional.md, online_resources.md, source_registry.csv.
+- !chapters/02_prostye_modeli_osnovy_chislennykh_metodov/teaching/ :: Методические материалы: assignments, questions, instructor_notes, terminology_table, model_inventory, glossary.
 
 ## Общие правила и маски
 

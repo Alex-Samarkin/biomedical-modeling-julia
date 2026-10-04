@@ -1,0 +1,7 @@
+chapter_id: 02_prostye_modeli_osnovy_chislennykh_metodov
+chapter_number: 02
+title: "Простые модели. Основы численных методов"
+status: draft
+created: 2026-10-04
+julia_environment: ../../Project.toml
+comment: "Рассматриваются приемы работы в Julia, основы решения уравнений, интегрирования и дифференцирования численными и символьными методами"

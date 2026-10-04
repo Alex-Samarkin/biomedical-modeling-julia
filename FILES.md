@@ -1,11 +1,11 @@
 # Карта проекта: ключевые файлы и папки
 
 > **Сгенерировано автоматически:** `python tools/update_file_map.py`
-> **Обновлено:** 2026-10-03 · **Плановый интервал:** раз в 3 дня · **Следующее обновление:** 2026-10-06
+> **Обновлено:** 2026-10-04 · **Плановый интервал:** раз в 3 дня · **Следующее обновление:** 2026-10-07
 > Описания берутся из реестра `tools/file_map_registry.md`; структура, размеры и даты пересчитываются при каждом запуске. Этот файл править вручную не нужно.
 
-В репозитории **95 файлов** и **36 папок**, под контролем git — **90 файлов**.
-Последний коммит: 2026-10-03.
+В репозитории **177 файлов** и **65 папок**, под контролем git — **108 файлов**.
+Последний коммит: 2026-10-04.
 
 ## Корень репозитория
 
@@ -19,27 +19,27 @@
 | [uv.lock](uv.lock) | файл, 154 Б | 2026-09-30 | Лок-файл uv. Внешних Python-зависимостей нет — только сам пакет проекта в editable-режиме. |
 | [.python-version](.python-version) | файл, 6 Б | 2026-09-30 | Требуемая версия Python для uv (3.14). |
 | [.gitignore](.gitignore) | файл, 2,1 КБ | 2026-09-30 | Политика хранения: Project.toml и Manifest.toml отслеживаются; отслеживаются результаты `*.csv`, `*.svg`, `*.png`, `*.jld2`; игнорируются `*.xlsx`, `*.parquet`, `*.h5`, `*.mat`, медиафайлы, содержимое `results/logs/` и все кэши. |
-| [README.md](README.md) | файл, генерируется | 2026-10-03 | Главная страница репозитория: назначение проекта, что уже готово, команды запуска и порядок обслуживания карты проекта (блок структуры обновляется скриптом). |
-| [FILES.md](FILES.md) | файл, генерируется | 2026-10-03 | Эта карта проекта: полный список ключевых файлов и папок с комментариями. Файл генерируется, править его вручную не нужно — правьте `tools/file_map_registry.md`. |
-| [AGENTS.md](AGENTS.md) | файл, 7,2 КБ | 2026-10-03 | Постоянная память проекта для ИИ-ассистента: роль (инженер, к.т.н., математическое моделирование в биомедицине), аудитория и стиль текстов, требования к коду и комментариям, технологический стек, правила работы с артефактами карты проекта. |
+| [README.md](README.md) | файл, генерируется | 2026-10-04 | Главная страница репозитория: назначение проекта, что уже готово, команды запуска и порядок обслуживания карты проекта (блок структуры обновляется скриптом). |
+| [FILES.md](FILES.md) | файл, генерируется | 2026-10-04 | Эта карта проекта: полный список ключевых файлов и папок с комментариями. Файл генерируется, править его вручную не нужно — правьте `tools/file_map_registry.md`. |
+| [AGENTS.md](AGENTS.md) | файл, 9,1 КБ | 2026-10-04 | Постоянная память проекта для ИИ-ассистента: границы работы над текстом (содержание `chapter.qmd` — только по явному запросу, при неоднозначности спрашивать), роль (инженер, к.т.н., математическое моделирование в биомедицине), аудитория и стиль текстов, требования к коду и комментариям, технологический стек, правила работы с артефактами карты проекта. |
 | [УЧАСТНИКИ ПОРЯДОК РАБОТЫ.docx](<УЧАСТНИКИ ПОРЯДОК РАБОТЫ.docx>) | файл, 405,7 КБ | 2026-09-30 | Организационный документ: состав участников проекта и регламент совместной работы. |
 | [src](src/) | папка, 1 файл, 73 Б | 2026-09-30 | Исходники Python-пакета-обёртки. |
 | [src/biomedical_modeling_julia](src/biomedical_modeling_julia/) | папка, 1 файл, 73 Б | 2026-09-30 | Пакет `biomedical_modeling_julia`, указанный как точка входа в pyproject.toml. |
 | [src/biomedical_modeling_julia/__init__.py](src/biomedical_modeling_julia/__init__.py) | файл, 73 Б | 2026-09-30 | Заглушка пакета: функция `main()` печатает приветствие, нужна только для точки входа из pyproject.toml. |
-| [tools](tools/) | папка, 3 файла, 41,4 КБ | 2026-10-03 | Служебные скрипты сопровождения репозитория: реестр комментариев, генератор карты проекта и инструкция по их запуску. |
+| [tools](tools/) | папка, 3 файла, 47,9 КБ | 2026-10-04 | Служебные скрипты сопровождения репозитория: реестр комментариев, генератор карты проекта и инструкция по их запуску. |
 | [tools/README.md](tools/README.md) | файл, 3,8 КБ | 2026-10-03 | Инструкция по обслуживанию карты: команды запуска, формат реестра, режим проверки и плановый интервал обновления. |
 | [tools/update_file_map.py](tools/update_file_map.py) | файл, 18,0 КБ | 2026-10-03 | Генератор карты проекта: читает реестр, обходит дерево репозитория, считает размеры и даты, пишет FILES.md и блок структуры в README.md. Зависимостей нет, только стандартная библиотека Python. |
-| [tools/file_map_registry.md](tools/file_map_registry.md) | файл, 19,6 КБ | 2026-10-03 | Этот реестр: пути и текстовые пояснения, которые попадают в карту. |
-| [chapters](chapters/) | папка, 79 файлов, 2,8 МБ | 2026-10-03 | Все главы пособия. Одна папка — одна глава; сейчас создана только глава 01. |
+| [tools/file_map_registry.md](tools/file_map_registry.md) | файл, 26,0 КБ | 2026-10-04 | Этот реестр: пути и текстовые пояснения, которые попадают в карту. |
+| [chapters](chapters/) | папка, 161 файл, 5,8 МБ | 2026-10-04 | Все главы пособия. Одна папка — одна глава; сейчас созданы главы 01 и 02. |
 
 ## Глава 01 — паспорт, сборка и артефакты
 
 | Путь | Тип / размер | Изменён | Комментарий |
 |---|---|---|---|
-| [chapters/01_kompyuternoe_modelirovanie_i_julia](chapters/01_kompyuternoe_modelirovanie_i_julia/) | папка, 79 файлов, 2,8 МБ | 2026-10-03 | Глава 01 «Компьютерное моделирование и Julia»: исходники текста, код, ноутбуки, данные, результаты и методические материалы. |
+| [chapters/01_kompyuternoe_modelirovanie_i_julia](chapters/01_kompyuternoe_modelirovanie_i_julia/) | папка, 92 файла, 3,6 МБ | 2026-10-03 | Глава 01 «Компьютерное моделирование и Julia»: исходники текста, код, ноутбуки, данные, результаты и методические материалы. |
 | [chapters/01_kompyuternoe_modelirovanie_i_julia/README.md](chapters/01_kompyuternoe_modelirovanie_i_julia/README.md) | файл, 245 Б | 2026-09-30 | Краткая карточка главы: название, тема и ссылка на основной файл chapter.md. |
 | [chapters/01_kompyuternoe_modelirovanie_i_julia/_metadata.yaml](chapters/01_kompyuternoe_modelirovanie_i_julia/_metadata.yaml) | файл, 3,1 КБ | 2026-09-30 | Паспорт главы (номер, ID, статус draft, автор — ПсковГУ, дата) и настройки вывода Quarto для трёх форматов: HTML (тема easy, выключка по ширине), Typst/PDF (A4, Calibri, кастомные заголовки и колонтитул) и DOCX. |
-| [chapters/01_kompyuternoe_modelirovanie_i_julia/chapter.qmd](chapters/01_kompyuternoe_modelirovanie_i_julia/chapter.qmd) | файл, 46,7 КБ | 2026-10-03 | Главный содержательный исходник главы (438 строк, движок jupyter): введение, зачем моделирование медикам, необходимый минимум математики, обзор средств моделирования. Править текст нужно прежде всего здесь. |
+| [chapters/01_kompyuternoe_modelirovanie_i_julia/chapter.qmd](chapters/01_kompyuternoe_modelirovanie_i_julia/chapter.qmd) | файл, 52,5 КБ | 2026-10-03 | Главный содержательный исходник главы (438 строк, движок jupyter): введение, зачем моделирование медикам, необходимый минимум математики, обзор средств моделирования. Править текст нужно прежде всего здесь. |
 | [chapters/01_kompyuternoe_modelirovanie_i_julia/chapter.md](chapters/01_kompyuternoe_modelirovanie_i_julia/chapter.md) | файл, 8,1 КБ | 2026-09-30 | Markdown-версия главы с YAML-фронтматтером и навигацией по разделам. Метаданные дублируют `_metadata.yaml` — при правке следите, чтобы они не разошлись. |
 | [chapters/01_kompyuternoe_modelirovanie_i_julia/chapter.html](chapters/01_kompyuternoe_modelirovanie_i_julia/chapter.html) | файл, 79,6 КБ | 2026-10-03 | Собранная HTML-версия главы. Генерируется Quarto, вручную не правится. |
 | [chapters/01_kompyuternoe_modelirovanie_i_julia/chapter.pdf](chapters/01_kompyuternoe_modelirovanie_i_julia/chapter.pdf) | файл, 129,4 КБ | 2026-09-30 | Собранный PDF через Typst. Генерируется Quarto, вручную не правится. |
@@ -62,7 +62,7 @@
 | [chapters/01_kompyuternoe_modelirovanie_i_julia/julia/sample1.jl](chapters/01_kompyuternoe_modelirovanie_i_julia/julia/sample1.jl) | файл, 565 Б | 2026-10-03 | Учебный пример построения фигуры Лиссажу на Plots (backend GR) — образец оформления кода для главы. |
 | [chapters/01_kompyuternoe_modelirovanie_i_julia/julia/tests](chapters/01_kompyuternoe_modelirovanie_i_julia/julia/tests/) | папка, 1 файл, 217 Б | 2026-09-30 | Тесты главы. |
 | [chapters/01_kompyuternoe_modelirovanie_i_julia/julia/tests/runtests.jl](chapters/01_kompyuternoe_modelirovanie_i_julia/julia/tests/runtests.jl) | файл, 217 Б | 2026-09-30 | Smoke-тест: после запуска StartMe.jl проверяет существование каталогов `DIR_RESULTS`, `DIR_FIGURES_SVG`, `DIR_FIGURES_PNG`. |
-| [chapters/01_kompyuternoe_modelirovanie_i_julia/pluto](chapters/01_kompyuternoe_modelirovanie_i_julia/pluto/) | папка, 3 файла, 244 Б | 2026-09-30 | Интерактивные ноутбуки Pluto главы. Работают в корневом Julia-окружении репозитория. |
+| [chapters/01_kompyuternoe_modelirovanie_i_julia/pluto](chapters/01_kompyuternoe_modelirovanie_i_julia/pluto/) | папка, 4 файла, 38,6 КБ | 2026-10-03 | Интерактивные ноутбуки Pluto главы. Работают в корневом Julia-окружении репозитория. |
 | [chapters/01_kompyuternoe_modelirovanie_i_julia/pluto/README.md](chapters/01_kompyuternoe_modelirovanie_i_julia/pluto/README.md) | файл, 72 Б | 2026-09-30 | Напоминание, что ноутбуки используют корневое окружение. |
 | [chapters/01_kompyuternoe_modelirovanie_i_julia/pluto/01_main_model.jl](chapters/01_kompyuternoe_modelirovanie_i_julia/pluto/01_main_model.jl) | файл, 82 Б | 2026-09-30 | Pluto-ноутбук с основной учебной моделью (каркас, формат v0.20.0). |
 | [chapters/01_kompyuternoe_modelirovanie_i_julia/pluto/02_experiment.jl](chapters/01_kompyuternoe_modelirovanie_i_julia/pluto/02_experiment.jl) | файл, 90 Б | 2026-09-30 | Pluto-ноутбук вычислительного эксперимента (каркас). |
@@ -111,10 +111,42 @@
 | [chapters/01_kompyuternoe_modelirovanie_i_julia/resources/reading](chapters/01_kompyuternoe_modelirovanie_i_julia/resources/reading/) | папка, 1 файл, 88 Б | 2026-09-30 | Подборки для чтения. |
 | [chapters/01_kompyuternoe_modelirovanie_i_julia/resources/videos](chapters/01_kompyuternoe_modelirovanie_i_julia/resources/videos/) | папка, 1 файл, 10 Б | 2026-09-30 | Видеоматериалы. |
 | [chapters/01_kompyuternoe_modelirovanie_i_julia/resources/web](chapters/01_kompyuternoe_modelirovanie_i_julia/resources/web/) | папка, 1 файл, 17 Б | 2026-09-30 | Полезные веб-ресурсы. |
-| [chapters/01_kompyuternoe_modelirovanie_i_julia/images](chapters/01_kompyuternoe_modelirovanie_i_julia/images/) | папка, 12 файлов, 653,1 КБ | 2026-10-03 | Скриншоты для вставки в главу (`paste-1.png` … `paste-12.png`; самый крупный — `paste-8.png`, ~204 КБ). |
+| [chapters/01_kompyuternoe_modelirovanie_i_julia/images](chapters/01_kompyuternoe_modelirovanie_i_julia/images/) | папка, 24 файла, 1,4 МБ | 2026-10-03 | Скриншоты для вставки в главу (`paste-1.png` … `paste-12.png`; самый крупный — `paste-8.png`, ~204 КБ). |
+
+## Глава 02 — паспорт, текст и структура
+
+| Путь | Тип / размер | Изменён | Комментарий |
+|---|---|---|---|
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/) | папка, 69 файлов, 2,2 МБ | 2026-10-04 | Глава 02 «Простые модели. Основы численных методов»: текст главы, каркас скриптов и типовое дерево каталогов (text, julia, pluto, data, results, figures, resources, references, teaching). |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/_metadata.yaml](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/_metadata.yaml) | файл, 3,2 КБ | 2026-10-04 | Паспорт главы 02 (ID, номер, название, статус draft, автор — ПсковГУ, дата) и настройки вывода Quarto для HTML, Typst/PDF и DOCX — те же, что в главе 01, но с исправленными реквизитами главы. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/metadata.yaml](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/metadata.yaml) | файл, 497 Б | 2026-10-04 | Служебный паспорт, который создаёт генератор `init_chapter_interactive_v2.py` (ID, номер, название, дата, комментарий). Частично дублирует `_metadata.yaml`. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/chapter.qmd](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/chapter.qmd) | файл, 51,6 КБ | 2026-10-04 | Главный содержательный исходник главы: введение, сквозные биомедицинские примеры (фармакокинетика, AUC, Михаэлис–Ментен), минимум Julia, бисекция/Ньютон/секущие, трапеции и Симпсон, численное дифференцирование, символьные методы, программа вычислительного эксперимента, интерпретация, ограничения, задания и ссылки на материалы. Править текст нужно прежде всего здесь. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/chapter.md](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/chapter.md) | файл, 8,4 КБ | 2026-10-04 | Шаблон Markdown-версии главы с YAML-фронтматтером и навигацией по разделам. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/custom-reference.docx](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/custom-reference.docx) | файл, 42,4 КБ | 2026-09-30 | Эталонный документ Word со стилями для DOCX-вывода (`reference-doc` в `_metadata.yaml`). |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/chapter.html](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/chapter.html) | файл, 124,6 КБ | 2026-10-04 | Собранная HTML-версия главы. Генерируется Quarto, вручную не правится. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/chapter_files](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/chapter_files/) | папка, 12 файлов, 864,6 КБ | 2026-10-04 | Ресурсы HTML-рендера: Bootstrap, quarto-html, tippy, tabsets. Полностью генерируется, править не нужно. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/StartMe.jl](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/StartMe.jl) | файл, 3,9 КБ | 2026-10-04 | Центральный узел главы: ищет корень проекта, объявляет константы `DIR_*`, создаёт каталоги, пишет журнал прогона и печатает конфигурацию. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/StartMe copy.jl](<chapters/02_prostye_modeli_osnovy_chislennykh_metodov/StartMe copy.jl>) | файл, 3,7 КБ | 2026-09-30 | Копия `StartMe.jl`, оставшаяся после копирования структуры главы 01. Рабочим входом не является, кандидат на удаление. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/julia](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/julia/) | папка, 6 файлов, 30,9 КБ | 2026-10-04 | Каркас скриптов главы (main.jl, run_experiments.jl, make_figures.jl, tests/runtests.jl). Пока заглушки вокруг StartMe.jl: логика расчётов ещё не реализована. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/julia/bisection_demo.jl](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/julia/bisection_demo.jl) | файл, 14,4 КБ | 2026-10-04 | Пошаговая демонстрация метода бисекции (уравнение C0·exp(−kt) − C_МТК = 0): печатает таблицу шагов «старт, первые 4 шага, финиш», пишет полный журнал всех итераций в `results/tables/bisection_steps.csv` и строит рисунок из четырёх панелей (функция и корень, «лестница» отрезков [a; b], сходимость по аргументу, крупный план финиша) в `figures/svg` и `figures/png`. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/julia/newton_demo.jl](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/julia/newton_demo.jl) | файл, 16,1 КБ | 2026-10-04 | Пошаговая демонстрация метода Ньютона для того же уравнения: печатает таблицу шагов «старт, первые 4 шага, финиш» (xₙ, f(xₙ), f′(xₙ), xₙ₊₁, Δx), пишет журнал в `results/tables/newton_steps.csv` и строит рисунок из четырёх панелей (касательные метода, переходы xₙ → xₙ₊₁, сходимость с проверкой квадратичного закона, крупный план финиша) в `figures/svg` и `figures/png`. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/pluto](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/pluto/) | папка, 3 файла, 244 Б | 2026-10-04 | Каркас блокнотов Pluto (01_main_model.jl, 02_experiment.jl) и README с напоминанием о корневом Julia-окружении. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/text](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/text/) | папка, 5 файлов, 686 Б | 2026-10-04 | Смысловые блоки главы (шаблоны с одними заголовками). Содержательная часть пока живёт в `chapter.qmd`. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/data](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/data/) | папка, 4 файла, 167 Б | 2026-10-04 | Типовая структура данных с README-заглушками: raw, processed, metadata. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/results](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/results/) | папка, 6 файлов, 3,6 КБ | 2026-10-04 | Каталоги для таблиц результатов и журналов прогонов. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/figures](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/figures/) | папка, 7 файлов, 1,1 МБ | 2026-10-04 | Каталоги для рисунков SVG и PNG. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/resources](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/resources/) | папка, 6 файлов, 161 Б | 2026-10-04 | Библиотека учебных материалов главы: books, papers, reading, videos, web. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/references](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/references/) | папка, 5 файлов, 298 Б | 2026-10-04 | Источники главы: bibliography.bib, references_main.md, references_optional.md, online_resources.md, source_registry.csv. |
+| [chapters/02_prostye_modeli_osnovy_chislennykh_metodov/teaching](chapters/02_prostye_modeli_osnovy_chislennykh_metodov/teaching/) | папка, 6 файлов, 667 Б | 2026-10-04 | Методические материалы: assignments, questions, instructor_notes, terminology_table, model_inventory, glossary. |
 
 ## Общие правила и маски
 
 | Путь | Тип / размер | Изменён | Комментарий |
 |---|---|---|---|
-| `*/README.md` | 19 файлов, 4,5 КБ | 2026-10-03 | Служебные README-указатели внутри папок структуры: напоминают назначение каталога и созданы генератором глав. Описания конкретных README — в соответствующих разделах выше. |
+| `*/README.md` | 37 файлов, 5,5 КБ | 2026-10-04 | Служебные README-указатели внутри папок структуры: напоминают назначение каталога и созданы генератором глав. Описания конкретных README — в соответствующих разделах выше. |
+
+## Не описано в реестре
+
+Эти пути существуют в дереве, но для них нет записи в `tools/file_map_registry.md`. Добавьте строку и перезапустите генератор:
+
+- `chapters/01_kompyuternoe_modelirovanie_i_julia/pluto/notebook01.jl`

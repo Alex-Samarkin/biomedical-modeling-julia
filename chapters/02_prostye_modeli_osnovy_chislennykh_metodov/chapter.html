@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Самаркин Александр Иванович, ПсковГУ">
+
+<title>Введение</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="chapter_files/libs/clipboard/clipboard.min.js"></script>
+<script src="chapter_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="chapter_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="chapter_files/libs/quarto-html/popper.min.js"></script>
+<script src="chapter_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="chapter_files/libs/quarto-html/anchor.min.js"></script>
+<link href="chapter_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="chapter_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="chapter_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="chapter_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="chapter_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="p {
+  text-align: justify;
+}">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#сквозные-примеры-главы" id="toc-сквозные-примеры-главы" class="nav-link active" data-scroll-target="#сквозные-примеры-главы">Сквозные примеры главы</a>
+  <ul class="collapse">
+  <li><a href="#пример-a.-концентрация-препарата-после-внутривенного-введения" id="toc-пример-a.-концентрация-препарата-после-внутривенного-введения" class="nav-link" data-scroll-target="#пример-a.-концентрация-препарата-после-внутривенного-введения">Пример A. Концентрация препарата после внутривенного введения</a></li>
+  <li><a href="#пример-b.-площадь-под-фармакокинетической-кривой-auc" id="toc-пример-b.-площадь-под-фармакокинетической-кривой-auc" class="nav-link" data-scroll-target="#пример-b.-площадь-под-фармакокинетической-кривой-auc">Пример B. Площадь под фармакокинетической кривой (AUC)</a></li>
+  <li><a href="#пример-c.-константа-элиминации-по-измерениям" id="toc-пример-c.-константа-элиминации-по-измерениям" class="nav-link" data-scroll-target="#пример-c.-константа-элиминации-по-измерениям">Пример C. Константа элиминации по измерениям</a></li>
+  <li><a href="#пример-d.-уравнение-михаэлисаментена-с-субстратным-торможением" id="toc-пример-d.-уравнение-михаэлисаментена-с-субстратным-торможением" class="nav-link" data-scroll-target="#пример-d.-уравнение-михаэлисаментена-с-субстратным-торможением">Пример D. Уравнение Михаэлиса–Ментена с субстратным торможением</a></li>
+  </ul></li>
+  <li><a href="#минимум-julia-необходимый-в-этой-главе" id="toc-минимум-julia-необходимый-в-этой-главе" class="nav-link" data-scroll-target="#минимум-julia-необходимый-в-этой-главе">Минимум Julia, необходимый в этой главе</a></li>
+  <li><a href="#решение-уравнений-fx0" id="toc-решение-уравнений-fx0" class="nav-link" data-scroll-target="#решение-уравнений-fx0">Решение уравнений: <span class="math inline">\(f(x)=0\)</span></a>
+  <ul class="collapse">
+  <li><a href="#постановка-задачи" id="toc-постановка-задачи" class="nav-link" data-scroll-target="#постановка-задачи">Постановка задачи</a></li>
+  <li><a href="#метод-бисекции-деления-отрезка-пополам" id="toc-метод-бисекции-деления-отрезка-пополам" class="nav-link" data-scroll-target="#метод-бисекции-деления-отрезка-пополам">Метод бисекции (деления отрезка пополам)</a></li>
+  <li><a href="#метод-ньютона-касательных" id="toc-метод-ньютона-касательных" class="nav-link" data-scroll-target="#метод-ньютона-касательных">Метод Ньютона (касательных)</a></li>
+  <li><a href="#метод-секущих" id="toc-метод-секущих" class="nav-link" data-scroll-target="#метод-секущих">Метод секущих</a></li>
+  <li><a href="#критерии-остановки-и-контроль-результата" id="toc-критерии-остановки-и-контроль-результата" class="nav-link" data-scroll-target="#критерии-остановки-и-контроль-результата">Критерии остановки и контроль результата</a></li>
+  <li><a href="#общий-случай-одно-уравнение-разные-функции" id="toc-общий-случай-одно-уравнение-разные-функции" class="nav-link" data-scroll-target="#общий-случай-одно-уравнение-разные-функции">Общий случай: одно уравнение — разные функции</a></li>
+  </ul></li>
+  <li><a href="#численное-интегрирование" id="toc-численное-интегрирование" class="nav-link" data-scroll-target="#численное-интегрирование">Численное интегрирование</a>
+  <ul class="collapse">
+  <li><a href="#идея-квадратурных-формул" id="toc-идея-квадратурных-формул" class="nav-link" data-scroll-target="#идея-квадратурных-формул">Идея квадратурных формул</a></li>
+  <li><a href="#применение-auc-по-таблице-концентраций" id="toc-применение-auc-по-таблице-концентраций" class="nav-link" data-scroll-target="#применение-auc-по-таблице-концентраций">Применение: AUC по таблице концентраций</a></li>
+  </ul></li>
+  <li><a href="#численное-дифференцирование" id="toc-численное-дифференцирование" class="nav-link" data-scroll-target="#численное-дифференцирование">Численное дифференцирование</a>
+  <ul class="collapse">
+  <li><a href="#формулы-конечных-разностей" id="toc-формулы-конечных-разностей" class="nav-link" data-scroll-target="#формулы-конечных-разностей">Формулы конечных разностей</a></li>
+  <li><a href="#почему-нельзя-брать-шаг-как-можно-меньше" id="toc-почему-нельзя-брать-шаг-как-можно-меньше" class="nav-link" data-scroll-target="#почему-нельзя-брать-шаг-как-можно-меньше">Почему нельзя брать шаг «как можно меньше»</a></li>
+  </ul></li>
+  <li><a href="#символьные-и-аналитические-методы" id="toc-символьные-и-аналитические-методы" class="nav-link" data-scroll-target="#символьные-и-аналитические-методы">Символьные и аналитические методы</a></li>
+  <li><a href="#вычислительный-эксперимент" id="toc-вычислительный-эксперимент" class="nav-link" data-scroll-target="#вычислительный-эксперимент">Вычислительный эксперимент</a>
+  <ul class="collapse">
+  <li><a href="#цель-эксперимента" id="toc-цель-эксперимента" class="nav-link" data-scroll-target="#цель-эксперимента">Цель эксперимента</a></li>
+  <li><a href="#сценарии" id="toc-сценарии" class="nav-link" data-scroll-target="#сценарии">Сценарии</a></li>
+  <li><a href="#план-проведения" id="toc-план-проведения" class="nav-link" data-scroll-target="#план-проведения">План проведения</a></li>
+  <li><a href="#критерии-сравнения" id="toc-критерии-сравнения" class="nav-link" data-scroll-target="#критерии-сравнения">Критерии сравнения</a></li>
+  <li><a href="#параметры-запуска" id="toc-параметры-запуска" class="nav-link" data-scroll-target="#параметры-запуска">Параметры запуска</a></li>
+  </ul></li>
+  <li><a href="#результаты" id="toc-результаты" class="nav-link" data-scroll-target="#результаты">Результаты</a></li>
+  <li><a href="#интерпретация-результатов" id="toc-интерпретация-результатов" class="nav-link" data-scroll-target="#интерпретация-результатов">Интерпретация результатов</a></li>
+  <li><a href="#ограничения-применимости" id="toc-ограничения-применимости" class="nav-link" data-scroll-target="#ограничения-применимости">Ограничения применимости</a>
+  <ul class="collapse">
+  <li><a href="#математические-ограничения" id="toc-математические-ограничения" class="nav-link" data-scroll-target="#математические-ограничения">Математические ограничения</a></li>
+  <li><a href="#численные-ограничения" id="toc-численные-ограничения" class="nav-link" data-scroll-target="#численные-ограничения">Численные ограничения</a></li>
+  <li><a href="#ограничения-данных" id="toc-ограничения-данных" class="nav-link" data-scroll-target="#ограничения-данных">Ограничения данных</a></li>
+  <li><a href="#ограничения-клинической-интерпретации" id="toc-ограничения-клинической-интерпретации" class="nav-link" data-scroll-target="#ограничения-клинической-интерпретации">Ограничения клинической интерпретации</a></li>
+  </ul></li>
+  <li><a href="#контрольные-вопросы-и-задания" id="toc-контрольные-вопросы-и-задания" class="nav-link" data-scroll-target="#контрольные-вопросы-и-задания">Контрольные вопросы и задания</a>
+  <ul class="collapse">
+  <li><a href="#базовый-уровень" id="toc-базовый-уровень" class="nav-link" data-scroll-target="#базовый-уровень">Базовый уровень</a></li>
+  <li><a href="#средний-уровень" id="toc-средний-уровень" class="nav-link" data-scroll-target="#средний-уровень">Средний уровень</a></li>
+  <li><a href="#продвинутый-уровень" id="toc-продвинутый-уровень" class="nav-link" data-scroll-target="#продвинутый-уровень">Продвинутый уровень</a></li>
+  </ul></li>
+  <li><a href="#материалы-главы" id="toc-материалы-главы" class="nav-link" data-scroll-target="#материалы-главы">Материалы главы</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="..\..\chapter.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li><li><a href="chapter.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Введение</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Самаркин Александр Иванович, ПсковГУ </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Любая биомедицинская модель, какой бы сложной она ни казалась, в конечном счёте опирается на несколько простых вычислительных «кирпичиков»: <strong>решить уравнение</strong>, <strong>вычислить интеграл</strong> и <strong>вычислить производную</strong>. Аналитически — то есть формулой в общем виде — эти операции удаётся выполнить лишь для простейших случаев. Как только появляется нелинейность, обратная связь или вместо гладкой функции мы располагаем лишь таблицей измерений, на помощь приходят <strong>численные методы</strong>: последовательность арифметических действий, которая даёт приближённое значение искомой величины с контролируемой погрешностью.</p>
+<p>В этой главе мы разберём три базовые вычислительные задачи и посмотрим, как они возникают в клинической и лабораторной практике.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Задача</th>
+<th>Математическая постановка</th>
+<th>Биомедицинский пример</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Решить уравнение</td>
+<td>найти <span class="math inline">\(x\)</span>, при котором <span class="math inline">\(f(x)=0\)</span></td>
+<td>когда концентрация препарата опустится до минимальной терапевтической? какую концентрацию субстрата надо создать, чтобы фермент работал с заданной скоростью?</td>
+</tr>
+<tr class="even">
+<td>Вычислить интеграл</td>
+<td><span class="math inline">\(I=\int_a^b f(x)\,dx\)</span></td>
+<td>площадь под фармакокинетической кривой (AUC) — мера суммарной экспозиции организма к препарату</td>
+</tr>
+<tr class="odd">
+<td>Вычислить производную</td>
+<td><span class="math inline">\(f'(x)=\lim\limits_{h\to 0}\dfrac{f(x+h)-f(x)}{h}\)</span></td>
+<td>скорость элиминации препарата и константа <span class="math inline">\(k\)</span>, оценённые по нескольким измерениям концентрации</td>
+</tr>
+</tbody>
+</table>
+<p>Главная мысль главы: <strong>численный ответ без оценки погрешности не является результатом</strong>. Поэтому каждый метод мы рассматриваем вместе с его порядком точности, а каждый расчёт — вместе с проверкой на задаче, у которой ответ известен заранее.</p>
+<p>Материал главы не требует вычислительной математики «с нуля»: нам понадобятся только производная, интеграл и несколько строк кода на Julia. Все формулы сопровождаются расшифровкой величин и единиц измерения.</p>
+<section id="сквозные-примеры-главы" class="level1">
+<h1>Сквозные примеры главы</h1>
+<p>Чтобы не менять предметную область на каждом шаге, мы возьмём один сквозной фармакологический пример и одно биохимическое уравнение. Первый удобен тем, что для него известно точное решение (на нём можно проверять методы), второе — тем, что точного решения у него нет (на нём видно, зачем численные методы вообще нужны).</p>
+<section id="пример-a.-концентрация-препарата-после-внутривенного-введения" class="level2">
+<h2 class="anchored" data-anchor-id="пример-a.-концентрация-препарата-после-внутривенного-введения">Пример A. Концентрация препарата после внутривенного введения</h2>
+<p>Простейшая однокамерная фармакокинетическая модель предполагает, что препарат мгновенно распределяется по организму, а выводится пропорционально своей текущей концентрации. Тогда концентрация убывает по экспоненте:</p>
+<p><span class="math display">\[C(t) = C_0 e^{-k t},\]</span></p>
+<p>где</p>
+<ul>
+<li><span class="math inline">\(C(t)\)</span> — концентрация препарата в плазме в момент времени <span class="math inline">\(t\)</span>, мг/л;</li>
+<li><span class="math inline">\(C_0\)</span> — начальная (сразу после введения) концентрация, мг/л;</li>
+<li><span class="math inline">\(k\)</span> — константа элиминации, 1/ч (доля препарата, выводимая за единицу времени);</li>
+<li><span class="math inline">\(t\)</span> — время, ч.</li>
+</ul>
+<p>Смысл константы <span class="math inline">\(k\)</span> удобно переводить в привычный период полувыведения: <span class="math inline">\(t_{1/2}=\ln 2 / k\)</span>. Например, при <span class="math inline">\(k=0.15\)</span> ч⁻¹ имеем <span class="math inline">\(t_{1/2}\approx 4.6\)</span> ч — за 4.6 часа концентрация падает вдвое.</p>
+<p><strong>Вопрос, который ставит врач:</strong> через какое время концентрация опустится до минимальной терапевтической концентрации <span class="math inline">\(C_{\text{МТК}}\)</span> (ниже неё лечение перестаёт действовать)? Это задача решения уравнения <span class="math inline">\(C(t) - C_{\text{МТК}} = 0\)</span>.</p>
+<p>Для экспоненты ответ выписывается формулой:</p>
+<p><span class="math display">\[t^{*} = \frac{1}{k}\ln\frac{C_0}{C_{\text{МТК}}}.\]</span></p>
+<p>При <span class="math inline">\(C_0 = 20\)</span> мг/л, <span class="math inline">\(C_{\text{МТК}} = 2\)</span> мг/л и <span class="math inline">\(k = 0.15\)</span> ч⁻¹ получаем <span class="math inline">\(t^{*} = \ln(10)/0.15 \approx 15.4\)</span> ч. Этот пример мы будем использовать как <strong>эталон</strong>: численный метод обязан дать именно это число.</p>
+</section>
+<section id="пример-b.-площадь-под-фармакокинетической-кривой-auc" class="level2">
+<h2 class="anchored" data-anchor-id="пример-b.-площадь-под-фармакокинетической-кривой-auc">Пример B. Площадь под фармакокинетической кривой (AUC)</h2>
+<p>Суммарная экспозиция организма к препарату измеряется площадью под кривой «концентрация — время»:</p>
+<p><span class="math display">\[\mathrm{AUC}(T) = \int_0^T C(t)\,dt,\]</span></p>
+<p>единицы измерения — мг·ч/л (произведение концентрации на время). Именно AUC сравнивают при доказательстве биоэквивалентности двух лекарственных форм: если площади совпадают, препараты попадают в кровь в сопоставимом количестве.</p>
+<p>Для экспоненциальной модели интеграл берётся точно:</p>
+<p><span class="math display">\[\mathrm{AUC}(T) = \frac{C_0}{k}\left(1-e^{-kT}\right).\]</span></p>
+<p>Но в реальном исследовании у нас нет функции <span class="math inline">\(C(t)\)</span> — есть 5–10 проб крови, отобранных в определённые моменты. Вычислить интеграл по таблице значений — это задача <strong>численного интегрирования</strong> (квадратуры).</p>
+</section>
+<section id="пример-c.-константа-элиминации-по-измерениям" class="level2">
+<h2 class="anchored" data-anchor-id="пример-c.-константа-элиминации-по-измерениям">Пример C. Константа элиминации по измерениям</h2>
+<p>Пусть известны только измеренные концентрации. Тогда</p>
+<p><span class="math display">\[k = -\frac{C'(t)}{C(t)}\]</span></p>
+<p>(минус, потому что концентрация убывает). Значит, чтобы найти <span class="math inline">\(k\)</span>, нужно оценить производную по табличным данным — это задача <strong>численного дифференцирования</strong>. Здесь нас подстерегает неприятность: операция дифференцирования усиливает погрешность измерений, поэтому «наивное» деление малых разностей может дать бессмысленный результат.</p>
+</section>
+<section id="пример-d.-уравнение-михаэлисаментена-с-субстратным-торможением" class="level2">
+<h2 class="anchored" data-anchor-id="пример-d.-уравнение-михаэлисаментена-с-субстратным-торможением">Пример D. Уравнение Михаэлиса–Ментена с субстратным торможением</h2>
+<p>Скорость ферментативной реакции <span class="math inline">\(v\)</span> зависит от концентрации субстрата <span class="math inline">\(S\)</span>:</p>
+<p><span class="math display">\[v(S) = \frac{V_{\max} S}{K_m + S + S^2/K_i},\]</span></p>
+<p>где</p>
+<ul>
+<li><span class="math inline">\(v\)</span> — скорость реакции, мкмоль/(л·мин);</li>
+<li><span class="math inline">\(S\)</span> — концентрация субстрата, мкмоль/л;</li>
+<li><span class="math inline">\(V_{\max}\)</span> — максимальная скорость реакции, мкмоль/(л·мин);</li>
+<li><span class="math inline">\(K_m\)</span> — константа Михаэлиса, мкмоль/л (концентрация, при которой скорость равна половине максимальной, если бы торможения не было);</li>
+<li><span class="math inline">\(K_i\)</span> — константа субстратного торможения, мкмоль/л.</li>
+</ul>
+<p>Дополнительное слагаемое <span class="math inline">\(S^2/K_i\)</span> описывает хорошо известный в биохимии эффект: при большой концентрации субстрат начинает <strong>тормозить</strong> собственный фермент. Из-за нелинейности выписать формулу вида <span class="math inline">\(S = \ldots\)</span> уже не удаётся, и вопрос «какую концентрацию субстрата надо создать, чтобы получить заданную скорость <span class="math inline">\(v\)</span>?» решается только численно. Функция <span class="math inline">\(v(S)\)</span> при этом не монотонна: у неё есть максимум, поэтому у уравнения может быть два корня, и важно заранее указать отрезок, на котором мы ищем ответ.</p>
+</section>
+</section>
+<section id="минимум-julia-необходимый-в-этой-главе" class="level1">
+<h1>Минимум Julia, необходимый в этой главе</h1>
+<p>Всё, что нужно для численных методов, — это функции, массивы и циклы. Напомним ключевые конструкции на примере уже знакомой нам концентрации.</p>
+<div id="2" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Константы задачи: однокамерная фармакокинетика после болюсного введения.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Все величины именованы так, чтобы единицы измерения читались прямо в имени.</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> C0_MG_L <span class="op">=</span> <span class="fl">20.0</span>     <span class="co"># начальная концентрация, мг/л</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> K_ELIM_1H <span class="op">=</span> <span class="fl">0.15</span>   <span class="co"># константа элиминации, 1/ч</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> MTC_MG_L <span class="op">=</span> <span class="fl">2.0</span>     <span class="co"># минимальная терапевтическая концентрация, мг/л</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="st">"Концентрация препарата в момент времени t (ч), мг/л."</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">concentration</span>(t) <span class="op">=</span> C0_MG_L <span class="op">*</span> <span class="fu">exp</span>(<span class="op">-</span>K_ELIM_1H <span class="op">*</span> t)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Проверка: в начальный момент времени концентрация равна C0.</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"C(0)   = "</span>, <span class="fu">concentration</span>(<span class="fl">0.0</span>), <span class="st">" мг/л"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"C(24)  = "</span>, <span class="fu">round</span>(<span class="fu">concentration</span>(<span class="fl">24.0</span>), digits <span class="op">=</span> <span class="fl">3</span>), <span class="st">" мг/л"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"t_1/2  = "</span>, <span class="fu">round</span>(<span class="fu">log</span>(<span class="fl">2</span>) <span class="op">/</span> K_ELIM_1H, digits <span class="op">=</span> <span class="fl">2</span>), <span class="st">" ч"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"t_МТК  = "</span>, <span class="fu">round</span>(<span class="fu">log</span>(C0_MG_L <span class="op">/</span> MTC_MG_L) <span class="op">/</span> K_ELIM_1H, digits <span class="op">=</span> <span class="fl">4</span>), <span class="st">" ч"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>C(0)   = 20.0 мг/л
+C(24)  = 0.546 мг/л
+t_1/2  = 4.62 ч
+t_МТК  = 15.3506 ч</code></pre>
+</div>
+</div>
+<p>Из этого короткого примера видно три правила, которых мы будем придерживаться:</p>
+<ol type="1">
+<li><strong>Числовые константы имеют имена и единицы измерения.</strong> Запись <code>0.15</code> в середине формулы ничего не сообщает читателю; запись <code>K_ELIM_1H</code> — сообщает.</li>
+<li><strong>Функция делает что-то одно.</strong> <code>concentration</code> вычисляет концентрацию и не занимается печатью или построением графиков.</li>
+<li><strong>Результат проверяется на простом частном случае.</strong> Здесь такой проверкой служит <code>C(0) = C0</code>.</li>
+</ol>
+<p>Дополнительно нам понадобятся:</p>
+<ul>
+<li><code>range(a, b; length = n)</code> — равномерная сетка из <span class="math inline">\(n\)</span> точек (например, моменты отбора проб);</li>
+<li><code>concentration.(t_grid)</code> — «векторизованный» вызов функции (точка перед скобками означает «применить к каждому элементу массива»);</li>
+<li><code>while</code> — цикл с неизвестным заранее числом итераций (именно так работают все итерационные методы);</li>
+<li>аргументы со значениями по умолчанию: <code>xtol = 1e-10</code> — допуск по аргументу.</li>
+</ul>
+<p>Все скрипты главы запускаются из корня репозитория в едином окружении проекта:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">julia</span> <span class="at">--project</span><span class="op">=</span>. chapters/02_prostye_modeli_osnovy_chislennykh_metodov/StartMe.jl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Пути к каталогам данных и результатов берутся из констант <code>DIR_*</code>, объявленных в <code>StartMe.jl</code>, а не пишутся в коде строками.</p>
+</section>
+<section id="решение-уравнений-fx0" class="level1">
+<h1>Решение уравнений: <span class="math inline">\(f(x)=0\)</span></h1>
+<section id="постановка-задачи" class="level2">
+<h2 class="anchored" data-anchor-id="постановка-задачи">Постановка задачи</h2>
+<p>Пусть <span class="math inline">\(f(x)\)</span> — непрерывная функция. Требуется найти такое <span class="math inline">\(x^{*}\)</span>, что <span class="math inline">\(f(x^{*})=0\)</span>. В биомедицинских задачах <span class="math inline">\(x\)</span> — это время, доза, концентрация или температура, а <span class="math inline">\(f\)</span> — разность между «тем, что модель даёт», и «тем, что нам нужно».</p>
+<p>Уравнение может быть и неразрешимым аналитически (как пример D), поэтому нужен универсальный итерационный приём. Общая идея всех методов одинакова: <strong>начать с приближения и последовательно его уточнять</strong>, пока поправка не станет меньше заданного допуска.</p>
+</section>
+<section id="метод-бисекции-деления-отрезка-пополам" class="level2">
+<h2 class="anchored" data-anchor-id="метод-бисекции-деления-отрезка-пополам">Метод бисекции (деления отрезка пополам)</h2>
+<p>Если на концах отрезка <span class="math inline">\([a,b]\)</span> функция принимает значения разных знаков, то внутри обязательно есть корень (теорема о промежуточном значении). Метод бисекции просто делит отрезок пополам и оставляет ту половину, где знаки по-прежнему разные.</p>
+<div id="4" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="st">"Метод бисекции: корень непрерывной функции f на отрезке [a, b]."</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">bisect</span>(f, a, b; xtol <span class="op">=</span> <span class="fl">1e-10</span>, max_iter <span class="op">=</span> <span class="fl">200</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    fa, fb <span class="op">=</span> <span class="fu">f</span>(a), <span class="fu">f</span>(b)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Без смены знака метод не применим — сообщаем об этом, а не выдаём «ответ».</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    fa <span class="op">*</span> fb <span class="op">&gt;</span> <span class="fl">0</span> <span class="op">&amp;&amp;</span> <span class="fu">error</span>(<span class="st">"На концах отрезка функция одного знака: корень не локализован."</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> iter <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>max_iter</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        m <span class="op">=</span> (a <span class="op">+</span> b) <span class="op">/</span> <span class="fl">2</span>          <span class="co"># середина текущего отрезка</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        fm <span class="op">=</span> <span class="fu">f</span>(m)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        (b <span class="op">-</span> a) <span class="op">&lt;</span> xtol <span class="op">&amp;&amp;</span> <span class="cf">return</span> m, iter   <span class="co"># достигнута заданная точность по аргументу</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> fa <span class="op">*</span> fm <span class="op">&lt;</span> <span class="fl">0</span>           <span class="co"># корень в левой половине</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>            b, fb <span class="op">=</span> m, fm</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>                     <span class="co"># корень в правой половине</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>            a, fa <span class="op">=</span> m, fm</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (a <span class="op">+</span> b) <span class="op">/</span> <span class="fl">2</span>, max_iter</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>Main.Notebook.bisect</code></pre>
+</div>
+</div>
+<p>Применим метод к примеру A: найдём время, когда концентрация сравнится с минимальной терапевтической.</p>
+<div id="6" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="st">"Невязка задачи: насколько концентрация отличается от порога C_МТК, мг/л."</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">residual</span>(t) <span class="op">=</span> <span class="fu">concentration</span>(t) <span class="op">-</span> MTC_MG_L</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>t_numeric, iterations <span class="op">=</span> <span class="fu">bisect</span>(residual, <span class="fl">0.0</span>, <span class="fl">48.0</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>t_exact <span class="op">=</span> <span class="fu">log</span>(C0_MG_L <span class="op">/</span> MTC_MG_L) <span class="op">/</span> K_ELIM_1H</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Численное решение:  t = "</span>, <span class="fu">round</span>(t_numeric, digits <span class="op">=</span> <span class="fl">9</span>), <span class="st">" ч"</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Точное (формула):    t = "</span>, <span class="fu">round</span>(t_exact, digits <span class="op">=</span> <span class="fl">9</span>), <span class="st">" ч"</span>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Разница:            "</span>, <span class="fu">abs</span>(t_numeric <span class="op">-</span> t_exact), <span class="st">" ч"</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Потребовалось итераций: "</span>, iterations)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Численное решение:  t = 15.350567287 ч
+Точное (формула):    t = 15.350567287 ч
+Разница:            1.7973178501051734e-11 ч
+Потребовалось итераций: 40</code></pre>
+</div>
+</div>
+<p>Метод бисекции обладает двумя замечательными свойствами: он <strong>всегда сходится</strong> (если корень локализован) и его точность известна заранее. После <span class="math inline">\(n\)</span> делений длина отрезка равна <span class="math inline">\((b-a)/2^n\)</span>, поэтому для точности <span class="math inline">\(\varepsilon\)</span> нужно</p>
+<p><span class="math display">\[n \ge \log_2\frac{b-a}{\varepsilon}\]</span></p>
+<p>итераций. Для нашего примера при <span class="math inline">\(\varepsilon=10^{-10}\)</span> ч нужно не менее 39 делений отрезка; счётчик в программе показал 40 итераций, потому что условие остановки проверяется перед очередным делением. Плата за надёжность — медленная сходимость: каждый шаг удваивает достигнутую точность, то есть добавляет одну верную <strong>двоичную</strong> цифру (примерно 0.3 десятичной цифры).</p>
+</section>
+<section id="метод-ньютона-касательных" class="level2">
+<h2 class="anchored" data-anchor-id="метод-ньютона-касательных">Метод Ньютона (касательных)</h2>
+<p>Метод Ньютона использует не только значения функции, но и её производную. Геометрически мы проводим касательную к графику в текущей точке и берём точку её пересечения с осью абсцисс:</p>
+<p><span class="math display">\[x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}.\]</span></p>
+<div id="8" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="st">"Метод Ньютона: корень f(x)=0 при известной производной df."</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">newton</span>(f, df, x0; ftol <span class="op">=</span> <span class="fl">1e-12</span>, max_iter <span class="op">=</span> <span class="fl">50</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x0</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> iter <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>max_iter</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        fx <span class="op">=</span> <span class="fu">f</span>(x)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">abs</span>(fx) <span class="op">&lt;</span> ftol <span class="op">&amp;&amp;</span> <span class="cf">return</span> x, iter          <span class="co"># невязка уже мала</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        dfx <span class="op">=</span> <span class="fu">df</span>(x)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">abs</span>(dfx) <span class="op">&lt;</span> <span class="fu">eps</span>(<span class="dt">Float64</span>) <span class="op">&amp;&amp;</span> <span class="fu">error</span>(<span class="st">"Производная близка к нулю: шаг метода Ньютона не определён."</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        x <span class="op">-=</span> fx <span class="op">/</span> dfx</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x, max_iter</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="st">"Производная концентрации dC/dt = -k·C(t), мг/(л·ч)."</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="fu">concentration_derivative</span>(t) <span class="op">=</span> <span class="op">-</span>K_ELIM_1H <span class="op">*</span> <span class="fu">concentration</span>(t)</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>t_newton, newton_iterations <span class="op">=</span> <span class="fu">newton</span>(residual, concentration_derivative, <span class="fl">5.0</span>)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Ньютон:      t = "</span>, <span class="fu">round</span>(t_newton, digits <span class="op">=</span> <span class="fl">9</span>), <span class="st">" ч за "</span>, newton_iterations, <span class="st">" итерации"</span>)</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Бисекция дала "</span>, iterations, <span class="st">" итераций"</span>)</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Точное значение: "</span>, <span class="fu">round</span>(t_exact, digits <span class="op">=</span> <span class="fl">9</span>), <span class="st">" ч"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Ньютон:      t = 15.350567287 ч за 7 итерации
+Бисекция дала 40 итераций
+Точное значение: 15.350567287 ч</code></pre>
+</div>
+</div>
+<p>Стартовав с грубого приближения <span class="math inline">\(t_0=5\)</span> ч, метод Ньютона пришёл к ответу за 7 итераций вместо 40 у бисекции. Причина — <strong>квадратичная сходимость</strong>: вблизи корня число верных знаков на каждом шаге примерно удваивается, и последние шаги «добирают» сразу много цифр. Но надёжность ниже:</p>
+<ul>
+<li>если <span class="math inline">\(f'(x_n)\approx 0\)</span> (касательная почти горизонтальна), шаг становится огромным и метод «улетает»;</li>
+<li>при неудачном начальном приближении метод может сойтись к другому корню или разойтись;</li>
+<li>производную нужно знать аналитически либо вычислять численно (тогда метод теряет часть преимущества).</li>
+</ul>
+<p>Практическое правило: <strong>Ньютон — для скорости, бисекция — для гарантии</strong>. Часто их комбинируют: бисекцией локализуют корень, Ньютоном уточняют.</p>
+</section>
+<section id="метод-секущих" class="level2">
+<h2 class="anchored" data-anchor-id="метод-секущих">Метод секущих</h2>
+<p>Если производная неизвестна, её заменяют разностным отношением по двум последним точкам:</p>
+<p><span class="math display">\[x_{n+1} = x_n - f(x_n)\frac{x_n - x_{n-1}}{f(x_n) - f(x_{n-1})}.\]</span></p>
+<p>Сходимость почти такая же быстрая, как у Ньютона (порядок <span class="math inline">\(\approx 1.62\)</span>), но производная не нужна — платим за это одним дополнительным вычислением функции и чуть меньшей устойчивостью.</p>
+</section>
+<section id="критерии-остановки-и-контроль-результата" class="level2">
+<h2 class="anchored" data-anchor-id="критерии-остановки-и-контроль-результата">Критерии остановки и контроль результата</h2>
+<p>Итерационный метод нужно когда-то останавливать. Возможные критерии:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Критерий</th>
+<th>Запись</th>
+<th>Когда уместен</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>По аргументу</td>
+<td><span class="math inline">\(\lvert x_{n+1}-x_n\rvert &lt; \varepsilon_x\)</span></td>
+<td>когда важна точность самой величины (время, доза)</td>
+</tr>
+<tr class="even">
+<td>По невязке</td>
+<td><span class="math inline">\(\lvert f(x_n)\rvert &lt; \varepsilon_f\)</span></td>
+<td>когда важна точность попадания в цель</td>
+</tr>
+<tr class="odd">
+<td>По числу итераций</td>
+<td><span class="math inline">\(n = n_{\max}\)</span></td>
+<td>как страховка от зацикливания</td>
+</tr>
+</tbody>
+</table>
+<p>Ни один критерий не является доказательством правильности: если функция имеет несколько корней или задача плохо обусловлена, метод честно вернёт один из корней, но не тот, который нужен врачу. Поэтому любой численный корень проверяют подстановкой в исходное уравнение — в нашем случае вычисляют <code>concentration(t_numeric)</code> и убеждаются, что получено ожидаемое значение 2 мг/л.</p>
+</section>
+<section id="общий-случай-одно-уравнение-разные-функции" class="level2">
+<h2 class="anchored" data-anchor-id="общий-случай-одно-уравнение-разные-функции">Общий случай: одно уравнение — разные функции</h2>
+<p>Численный метод не должен зависеть от того, какая именно функция стоит под знаком <span class="math inline">\(f\)</span>. В Julia функции передаются как обычные аргументы, поэтому один и тот же <code>bisect</code> решает и фармакокинетическую, и биохимическую задачу.</p>
+<div id="10" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Пример D: ферментативная реакция с субстратным торможением.</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> VMAX_UMOL_L_MIN <span class="op">=</span> <span class="fl">1.0</span>    <span class="co"># максимальная скорость, мкмоль/(л·мин)</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> KM_UMOL_L <span class="op">=</span> <span class="fl">5.0</span>          <span class="co"># константа Михаэлиса, мкмоль/л</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> KI_UMOL_L <span class="op">=</span> <span class="fl">40.0</span>         <span class="co"># константа субстратного торможения, мкмоль/л</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> V_TARGET <span class="op">=</span> <span class="fl">0.4</span>           <span class="co"># заданная скорость реакции, мкмоль/(л·мин)</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="st">"Скорость реакции Михаэлиса–Ментена с субстратным торможением, мкмоль/(л·мин)."</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="fu">reaction_rate</span>(S) <span class="op">=</span> VMAX_UMOL_L_MIN <span class="op">*</span> S <span class="op">/</span> (KM_UMOL_L <span class="op">+</span> S <span class="op">+</span> S<span class="op">^</span><span class="fl">2</span> <span class="op">/</span> KI_UMOL_L)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="st">"Невязка: насколько скорость реакции отличается от заданной."</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="fu">rate_residual</span>(S) <span class="op">=</span> <span class="fu">reaction_rate</span>(S) <span class="op">-</span> V_TARGET</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Проверка локализации корня: на концах отрезка невязка имеет разные знаки.</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"v(1)  = "</span>, <span class="fu">round</span>(<span class="fu">reaction_rate</span>(<span class="fl">1.0</span>), digits <span class="op">=</span> <span class="fl">4</span>))</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"v(20) = "</span>, <span class="fu">round</span>(<span class="fu">reaction_rate</span>(<span class="fl">20.0</span>), digits <span class="op">=</span> <span class="fl">4</span>))</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>S_root, S_iterations <span class="op">=</span> <span class="fu">bisect</span>(rate_residual, <span class="fl">1.0</span>, <span class="fl">20.0</span>)</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"S = "</span>, <span class="fu">round</span>(S_root, digits <span class="op">=</span> <span class="fl">6</span>), <span class="st">" мкмоль/л за "</span>, S_iterations, <span class="st">" итераций"</span>)</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Проверка: v(S) = "</span>, <span class="fu">round</span>(<span class="fu">reaction_rate</span>(S_root), digits <span class="op">=</span> <span class="fl">6</span>), <span class="st">" мкмоль/(л·мин)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>v(1)  = 0.166
+v(20) = 0.5714
+S = 3.542487 мкмоль/л за 39 итераций
+Проверка: v(S) = 0.4 мкмоль/(л·мин)</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="численное-интегрирование" class="level1">
+<h1>Численное интегрирование</h1>
+<section id="идея-квадратурных-формул" class="level2">
+<h2 class="anchored" data-anchor-id="идея-квадратурных-формул">Идея квадратурных формул</h2>
+<p>Интеграл — это площадь под графиком. Численное интегрирование (квадратура) заменяет кривую <span class="math inline">\(f(x)\)</span> на отрезках простыми фигурами, площадь которых считается элементарно:</p>
+<ul>
+<li><strong>прямоугольники</strong> — кусочно-постоянная замена;</li>
+<li><strong>трапеции</strong> — кусочно-линейная;</li>
+<li><strong>парабола Симпсона</strong> — кусочно-квадратичная.</li>
+</ul>
+<p>Если сетка равномерная с шагом <span class="math inline">\(h\)</span>, составные формулы записываются так:</p>
+<p><span class="math display">\[I_{\text{трап}} = h\left[\frac{y_0+y_n}{2} + \sum_{i=1}^{n-1} y_i\right], \qquad I_{\text{Симп}} = \frac{h}{3}\left[y_0 + y_n + 4\!\!\sum_{i\ \text{нечётн.}}\!\! y_i + 2\!\!\sum_{i\ \text{чётн.}}\!\! y_i\right].\]</span></p>
+<p>Порядок точности по шагу <span class="math inline">\(h\)</span> различается на порядки:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Формула</th>
+<th>Погрешность</th>
+<th>Смысл</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Прямоугольники (левые/правые)</td>
+<td><span class="math inline">\(O(h)\)</span></td>
+<td>при уменьшении шага вдвое ошибка падает вдвое</td>
+</tr>
+<tr class="even">
+<td>Трапеции</td>
+<td><span class="math inline">\(O(h^2)\)</span></td>
+<td>шаг вдвое — ошибка вчетверо меньше</td>
+</tr>
+<tr class="odd">
+<td>Симпсон</td>
+<td><span class="math inline">\(O(h^4)\)</span></td>
+<td>шаг вдвое — ошибка в 16 раз меньше</td>
+</tr>
+</tbody>
+</table>
+<div id="12" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="st">"Правило трапеций для равномерной сетки: y — значения функции, h — шаг."</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">trapezoid</span>(y, h)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="fu">length</span>(y) <span class="op">-</span> <span class="fl">1</span>                 <span class="co"># число интервалов</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> (y[<span class="fl">1</span>] <span class="op">+</span> y[<span class="kw">end</span>]) <span class="op">/</span> <span class="fl">2</span>           <span class="co"># половинные веса у крайних точек</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="fl">2</span><span class="op">:</span>n</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>        s <span class="op">+=</span> y[i]</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> h <span class="op">*</span> s</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="st">"Правило Симпсона: требуется чётное число интервалов."</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">simpson</span>(y, h)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="fu">length</span>(y) <span class="op">-</span> <span class="fl">1</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">isodd</span>(n) <span class="op">&amp;&amp;</span> <span class="fu">error</span>(<span class="st">"Число интервалов должно быть чётным."</span>)</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> y[<span class="fl">1</span>] <span class="op">+</span> y[<span class="kw">end</span>]</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="fl">2</span><span class="op">:</span>n</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>        s <span class="op">+=</span> (<span class="fu">iseven</span>(i) ? <span class="fl">4</span> <span class="op">:</span> <span class="fl">2</span>) <span class="op">*</span> y[i]   <span class="co"># чередование весов 4 и 2</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> h <span class="op">*</span> s <span class="op">/</span> <span class="fl">3</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>Main.Notebook.simpson</code></pre>
+</div>
+</div>
+</section>
+<section id="применение-auc-по-таблице-концентраций" class="level2">
+<h2 class="anchored" data-anchor-id="применение-auc-по-таблице-концентраций">Применение: AUC по таблице концентраций</h2>
+<p>Разыграем типичную ситуацию: препарат введён, пробы взяты 13 раз за 24 часа (шаг 2 ч — «режим редкого отбора»). Вычислим AUC трапециями и Симпсоном и сравним с точным значением для экспоненциальной модели.</p>
+<div id="14" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> T_AUC_H <span class="op">=</span> <span class="fl">24.0</span>        <span class="co"># горизонт наблюдения, ч</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> N_SAMPLES <span class="op">=</span> <span class="fl">13</span>        <span class="co"># число проб (чётное число интервалов: 12)</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>t_grid <span class="op">=</span> <span class="fu">range</span>(<span class="fl">0.0</span>, T_AUC_H; length <span class="op">=</span> N_SAMPLES)   <span class="co"># моменты отбора проб, ч</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>c_grid <span class="op">=</span> <span class="fu">concentration</span>.(t_grid)                    <span class="co"># измеренные концентрации, мг/л</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>h_grid <span class="op">=</span> t_grid[<span class="fl">2</span>] <span class="op">-</span> t_grid[<span class="fl">1</span>]                     <span class="co"># шаг сетки, ч</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>auc_trap <span class="op">=</span> <span class="fu">trapezoid</span>(c_grid, h_grid)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>auc_simp <span class="op">=</span> <span class="fu">simpson</span>(c_grid, h_grid)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>auc_exact <span class="op">=</span> C0_MG_L <span class="op">*</span> (<span class="fl">1</span> <span class="op">-</span> <span class="fu">exp</span>(<span class="op">-</span>K_ELIM_1H <span class="op">*</span> T_AUC_H)) <span class="op">/</span> K_ELIM_1H</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Шаг сетки:                 "</span>, h_grid, <span class="st">" ч"</span>)</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"AUC трапециями:           "</span>, <span class="fu">round</span>(auc_trap, digits <span class="op">=</span> <span class="fl">4</span>), <span class="st">" мг·ч/л"</span>)</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"AUC Симпсоном:            "</span>, <span class="fu">round</span>(auc_simp, digits <span class="op">=</span> <span class="fl">4</span>), <span class="st">" мг·ч/л"</span>)</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"AUC точно:                "</span>, <span class="fu">round</span>(auc_exact, digits <span class="op">=</span> <span class="fl">4</span>), <span class="st">" мг·ч/л"</span>)</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Относительная ошибка трапеций: "</span>,</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>        <span class="fu">round</span>(<span class="fl">100</span> <span class="op">*</span> <span class="fu">abs</span>(auc_trap <span class="op">-</span> auc_exact) <span class="op">/</span> auc_exact, digits <span class="op">=</span> <span class="fl">3</span>), <span class="st">" %"</span>)</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Относительная ошибка Симпсона: "</span>,</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>        <span class="fu">round</span>(<span class="fl">100</span> <span class="op">*</span> <span class="fu">abs</span>(auc_simp <span class="op">-</span> auc_exact) <span class="op">/</span> auc_exact, digits <span class="op">=</span> <span class="fl">3</span>), <span class="st">" %"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Шаг сетки:                 2.0 ч
+AUC трапециями:           130.6614 мг·ч/л
+AUC Симпсоном:            129.6959 мг·ч/л
+AUC точно:                129.6902 мг·ч/л
+Относительная ошибка трапеций: 0.749 %
+Относительная ошибка Симпсона: 0.004 %</code></pre>
+</div>
+</div>
+<p>Обратите внимание на масштаб: при шаге 2 ч трапеции дают ошибку порядка одного процента, а формула Симпсона — практически точный результат. Это не случайность: трапеции «не видят» кривизну функции, а парабола Симпсона её учитывает.</p>
+<p>Важное практическое следствие: <strong>выбор квадратурной формулы эквивалентен выбору числа и моментов отбора проб</strong>. Если лаборатория может позволить себе только 4 пробы, никакая формула не восстановит AUC точно; если 10–15 проб — трапеции уже дают клинически приемлемую точность.</p>
+</section>
+</section>
+<section id="численное-дифференцирование" class="level1">
+<h1>Численное дифференцирование</h1>
+<section id="формулы-конечных-разностей" class="level2">
+<h2 class="anchored" data-anchor-id="формулы-конечных-разностей">Формулы конечных разностей</h2>
+<p>Производную приближают разностными отношениями. Три простейшие формулы и их порядок точности:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Формула</th>
+<th>Выражение</th>
+<th>Погрешность</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Левая (backward)</td>
+<td><span class="math inline">\(f'(x_i) \approx \dfrac{y_i - y_{i-1}}{h}\)</span></td>
+<td><span class="math inline">\(O(h)\)</span></td>
+</tr>
+<tr class="even">
+<td>Правая (forward)</td>
+<td><span class="math inline">\(f'(x_i) \approx \dfrac{y_{i+1} - y_i}{h}\)</span></td>
+<td><span class="math inline">\(O(h)\)</span></td>
+</tr>
+<tr class="odd">
+<td>Центральная</td>
+<td><span class="math inline">\(f'(x_i) \approx \dfrac{y_{i+1} - y_{i-1}}{2h}\)</span></td>
+<td><span class="math inline">\(O(h^2)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Центральная формула точнее, потому что ошибки «слева» и «справа» частично компенсируются. Взамен она требует значений по обе стороны от точки и поэтому неприменима на краях таблицы.</p>
+<div id="16" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="st">"Первая производная по центральной разности в точке с индексом i, O(h^2)."</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">central_diff</span>(y, i, h) <span class="op">=</span> (y[i <span class="op">+</span> <span class="fl">1</span>] <span class="op">-</span> y[i <span class="op">-</span> <span class="fl">1</span>]) <span class="op">/</span> (<span class="fl">2</span>h)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>Main.Notebook.central_diff</code></pre>
+</div>
+</div>
+</section>
+<section id="почему-нельзя-брать-шаг-как-можно-меньше" class="level2">
+<h2 class="anchored" data-anchor-id="почему-нельзя-брать-шаг-как-можно-меньше">Почему нельзя брать шаг «как можно меньше»</h2>
+<p>Формула кажется тем точнее, чем меньше <span class="math inline">\(h\)</span>, но это не так. Суммарная погрешность складывается из двух частей:</p>
+<p><span class="math display">\[\text{ошибка} \approx \underbrace{\frac{h^2}{6}\lvert f'''\rvert}_{\text{аппроксимация}} + \underbrace{\frac{\delta}{h}}_{\text{округление и погрешность измерения}},\]</span></p>
+<p>где <span class="math inline">\(\delta\)</span> — абсолютная погрешность измерения концентрации. Первое слагаемое уменьшается с ростом… точнее, с уменьшением <span class="math inline">\(h\)</span>, второе — растёт: мы делим маленькую разность на маленькое число и тем самым усиливаем шум. Минимум суммарной ошибки достигается при</p>
+<p><span class="math display">\[h^{*} \approx \left(\frac{3\delta}{\lvert f'''\rvert}\right)^{1/3}.\]</span></p>
+<p>Для числовых данных это означает: <strong>не дробите шаг бездумно</strong>. Покажем эффект на численном примере.</p>
+<div id="18" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Измерения в клинике округляются: возьмём концентрации с точностью до 0.1 мг/л.</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>t_meas <span class="op">=</span> [<span class="fl">2.0</span>, <span class="fl">2.5</span>, <span class="fl">3.0</span>, <span class="fl">3.5</span>, <span class="fl">4.0</span>]              <span class="co"># моменты отбора проб, ч</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>c_meas <span class="op">=</span> <span class="fu">round</span>.(<span class="fu">concentration</span>.(t_meas); digits <span class="op">=</span> <span class="fl">1</span>)   <span class="co"># «измеренные» концентрации, мг/л</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>h_meas <span class="op">=</span> t_meas[<span class="fl">2</span>] <span class="op">-</span> t_meas[<span class="fl">1</span>]                   <span class="co"># шаг, ч</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Моменты, ч:          "</span>, t_meas)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Концентрации, мг/л:  "</span>, c_meas)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Оцениваем k = -C'(t)/C(t) по внутренним точкам.</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="fl">2</span><span class="op">:</span><span class="fu">length</span>(t_meas)<span class="op">-</span><span class="fl">1</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>    k_est <span class="op">=</span> <span class="fu">-central_diff</span>(c_meas, i, h_meas) <span class="op">/</span> c_meas[i]</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">println</span>(<span class="st">"t = "</span>, t_meas[i], <span class="st">" ч:  k = "</span>, <span class="fu">round</span>(k_est, digits <span class="op">=</span> <span class="fl">4</span>), <span class="st">" 1/ч"</span>)</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Истинное значение k = "</span>, K_ELIM_1H, <span class="st">" 1/ч"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Моменты, ч:          [2.0, 2.5, 3.0, 3.5, 4.0]
+Концентрации, мг/л:  [14.8, 13.7, 12.8, 11.8, 11.0]
+t = 2.5 ч:  k = 0.146 1/ч
+t = 3.0 ч:  k = 0.1484 1/ч
+t = 3.5 ч:  k = 0.1525 1/ч
+Истинное значение k = 0.15 1/ч</code></pre>
+</div>
+</div>
+<p>Разброс оценок вокруг истинного значения — это и есть цена дифференцирования табличных данных. В реальной практике константу элиминации находят не по двум соседним точкам, а <strong>регрессией</strong> <span class="math inline">\(\ln C\)</span> по времени: усреднение по всем точкам подавляет случайную погрешность. Конечные разности при этом остаются полезными: они позволяют увидеть, линейна ли полулогарифмическая зависимость, то есть применима ли вообще однокамерная модель.</p>
+</section>
+</section>
+<section id="символьные-и-аналитические-методы" class="level1">
+<h1>Символьные и аналитические методы</h1>
+<p>Численный метод — не единственный инструмент. Там, где возможно, ответ лучше получить формулой: формула точна, не требует шага сетки и сразу показывает, как результат зависит от параметров (например, что <span class="math inline">\(t^{*}\)</span> растёт как <span class="math inline">\(\ln C_0\)</span> и падает как <span class="math inline">\(1/k\)</span>).</p>
+<p>Практическая схема работы выглядит так:</p>
+<ol type="1">
+<li><strong>Попробовать аналитику.</strong> Для простых моделей (экспонента, линейная функция, квадратное уравнение) ответ выписывается явно.</li>
+<li><strong>Проверить численный метод на аналитическом эталоне.</strong> Именно так мы поступили в примере A: 39 итераций бисекции дали то же число, что и формула.</li>
+<li><strong>Применить численный метод к задаче без аналитики.</strong> Это пример D — уравнение Михаэлиса–Ментена с торможением.</li>
+</ol>
+<p>Символьные вычисления в Julia выполняет пакет <strong>Symbolics.jl</strong> (он входит в экосистему ModelingToolkit.jl). Он позволяет получить производную «руками компьютера» и упростить выражение:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Символьное дифференцирование. Пакет Symbolics.jl нужно установить один раз: ] add Symbolics</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">ModelingToolkit</span>, <span class="bu">Symbolics</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="pp">@variables</span> t                       <span class="co"># символьная переменная времени</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> <span class="fu">Differential</span>(t)                <span class="co"># оператор производной по времени</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="fl">20.0</span> <span class="op">*</span> <span class="fu">exp</span>(<span class="op">-</span><span class="fl">0.15</span> <span class="op">*</span> t)          <span class="co"># символьная концентрация</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="fu">expand_derivatives</span>(<span class="fu">D</span>(C))           <span class="co"># аналитический результат: -3.0exp(-0.15t)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Этот фрагмент не выполняется при сборке главы: он показывает <strong>альтернативный путь</strong> и требует отдельной установки пакета. В основном вычислительном сценарии главы используются либо явные формулы, либо численные методы.</p>
+<p>Правило, которое стоит запомнить: <strong>символьный результат полезен, численный результат обязателен</strong>. Клиническое решение (доза, интервал введения, время отбора пробы) всегда должно быть числом с указанной точностью.</p>
+</section>
+<section id="вычислительный-эксперимент" class="level1">
+<h1>Вычислительный эксперимент</h1>
+<section id="цель-эксперимента" class="level2">
+<h2 class="anchored" data-anchor-id="цель-эксперимента">Цель эксперимента</h2>
+<p>Убедиться, что каждый рассмотренный метод ведёт себя так, как предсказывает теория: бисекция сходится линейно, Ньютон — квадратично, ошибка трапеций убывает как <span class="math inline">\(h^2\)</span>, ошибка Симпсона — как <span class="math inline">\(h^4\)</span>, а численное дифференцирование теряет точность при слишком малом шаге.</p>
+</section>
+<section id="сценарии" class="level2">
+<h2 class="anchored" data-anchor-id="сценарии">Сценарии</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>№</th>
+<th>Что варьируется</th>
+<th>Что измеряется</th>
+<th>Ожидаемый эффект</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>допуск <code>xtol</code> и число итераций бисекции</td>
+<td>достигнутая точность по аргументу</td>
+<td>точность <span class="math inline">\(\approx (b-a)/2^n\)</span></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>начальное приближение метода Ньютона</td>
+<td>число итераций до сходимости</td>
+<td>5–8 итераций при удачном старте, расходимость при плохом</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>шаг сетки <span class="math inline">\(h\)</span> для AUC</td>
+<td>относительная ошибка трапеций и Симпсона</td>
+<td>ошибки <span class="math inline">\(\sim h^2\)</span> и <span class="math inline">\(\sim h^4\)</span> соответственно</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>шаг <span class="math inline">\(h\)</span> и округление измерений для оценки <span class="math inline">\(k\)</span></td>
+<td>отклонение оценки <span class="math inline">\(k\)</span> от истинного значения</td>
+<td>существует оптимальный шаг; при малом <span class="math inline">\(h\)</span> оценка «разрушается» шумом</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="план-проведения" class="level2">
+<h2 class="anchored" data-anchor-id="план-проведения">План проведения</h2>
+<ol type="1">
+<li>Запустить скрипт главы из корня репозитория: <code>julia --project=. chapters/02_prostye_modeli_osnovy_chislennykh_metodov/julia/run_experiments.jl</code></li>
+<li>Для каждого сценария сохранить таблицу результатов в <code>results/tables/</code> (CSV) и журнал прогона в <code>results/logs/</code>.</li>
+<li>Построить графики зависимости ошибки от шага в логарифмических координатах и сохранить их в <code>figures/svg/</code> и <code>figures/png/</code> (скрипт <code>julia/make_figures.jl</code>).</li>
+<li>Внести числовые результаты в раздел «Результаты», а их биологическую трактовку — в раздел «Интерпретация».</li>
+</ol>
+</section>
+<section id="критерии-сравнения" class="level2">
+<h2 class="anchored" data-anchor-id="критерии-сравнения">Критерии сравнения</h2>
+<ul>
+<li>Для итерационных методов — число итераций до достижения заданной точности и фактическая невязка <span class="math inline">\(\lvert f(x_n)\rvert\)</span>.</li>
+<li>Для квадратур — относительная ошибка <span class="math inline">\(\lvert I_{\text{числ}} - I_{\text{точн}}\rvert / \lvert I_{\text{точн}}\rvert\)</span>.</li>
+<li>Для численного дифференцирования — относительное отклонение оценки <span class="math inline">\(k\)</span> от истинного значения.</li>
+</ul>
+</section>
+<section id="параметры-запуска" class="level2">
+<h2 class="anchored" data-anchor-id="параметры-запуска">Параметры запуска</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Параметр</th>
+<th>Значение</th>
+<th>Смысл</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(C_0\)</span></td>
+<td>20 мг/л</td>
+<td>начальная концентрация</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(k\)</span></td>
+<td>0.15 ч⁻¹</td>
+<td>константа элиминации</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(C_{\text{МТК}}\)</span></td>
+<td>2 мг/л</td>
+<td>минимальная терапевтическая концентрация</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(T\)</span></td>
+<td>24 ч</td>
+<td>горизонт наблюдения</td>
+</tr>
+<tr class="odd">
+<td>сетка <span class="math inline">\(h\)</span></td>
+<td>4; 2; 1; 0.5 ч</td>
+<td>шаги для исследования сходимости</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(V_{\max}, K_m, K_i\)</span></td>
+<td>1.0; 5.0; 40.0</td>
+<td>параметры реакции с торможением</td>
+</tr>
+<tr class="odd">
+<td>целевая скорость <span class="math inline">\(v\)</span></td>
+<td>0.4 мкмоль/(л·мин)</td>
+<td>правая часть уравнения</td>
+</tr>
+</tbody>
+</table>
+<p>Все параметры зафиксированы в <code>StartMe.jl</code> и в скриптах главы; случайные величины в этих сценариях не используются, поэтому генератор случайных чисел настраивать не требуется.</p>
+</section>
+</section>
+<section id="результаты" class="level1">
+<h1>Результаты</h1>
+<p>На момент оформления главы скрипты <code>julia/run_experiments.jl</code> и <code>julia/make_figures.jl</code> представляют собой каркас: расчётные таблицы и рисунки ещё не сформированы. После запуска эксперимента здесь должны появиться:</p>
+<ul>
+<li>таблица «шаг сетки — ошибка трапеций — ошибка Симпсона — отношение ошибок»;</li>
+<li>таблица «число итераций — достигнутая точность» для бисекции и Ньютона;</li>
+<li>график сходимости в координатах <span class="math inline">\(\lg h\)</span> — <span class="math inline">\(\lg(\text{ошибка})\)</span> с теоретическими наклонами 2 и 4;</li>
+<li>график зависимости оценки <span class="math inline">\(k\)</span> от шага при наличии погрешности измерений.</li>
+</ul>
+<p>Артефакты размещаются в каталогах:</p>
+<ul>
+<li><a href="results/tables/">Таблицы результатов</a></li>
+<li><a href="results/logs/">Журналы вычислений</a></li>
+<li><a href="figures/svg/">Графики SVG</a></li>
+<li><a href="figures/png/">Графики PNG</a></li>
+</ul>
+</section>
+<section id="интерпретация-результатов" class="level1">
+<h1>Интерпретация результатов</h1>
+<p>Численные методы в этой главе отвечают на вопросы, которые врач формулирует на «бытовом» языке.</p>
+<ul>
+<li><strong>Время выхода ниже терапевтического порога.</strong> Для нашей модели оно составляет около 15.4 ч при <span class="math inline">\(C_0=20\)</span> мг/л, <span class="math inline">\(C_{\text{МТК}}=2\)</span> мг/л и <span class="math inline">\(k=0.15\)</span> ч⁻¹. Это значит, что однократного введения недостаточно: повторную дозу назначают примерно через <span class="math inline">\(t_{1/2}\)</span> или раньше. Заметьте, как параметры влияют на ответ: рост начальной концентрации <span class="math inline">\(C_0\)</span> увеличивает время <strong>логарифмически</strong> (увеличить дозу вдвое — добавить всего 4.6 ч при той же <span class="math inline">\(k\)</span>), а уменьшение <span class="math inline">\(k\)</span> (например, при почечной недостаточности) увеличивает его <strong>обратно пропорционально</strong>.</li>
+<li><strong>AUC как мера экспозиции.</strong> Площадь под кривой прямо пропорциональна попавшему в кровь количеству препарата. Поэтому сравнение AUC — основной инструмент доказательства биоэквивалентности. Ошибка метода интегрирования здесь превращается в ошибку вывода о лекарстве: ошибка в 5 % на AUC — это уже пограничная зона для регуляторных требований.</li>
+<li><strong>Оценка <span class="math inline">\(k\)</span> по данным.</strong> Точность этой оценки определяет, насколько уверенно мы можем переносить результаты одного пациента на другого. Разброс оценок, который мы видели при дифференцировании «по двум точкам», — прямое напоминание: параметр, найденный по двум измерениям, нельзя считать надёжным.</li>
+<li><strong>Обратная задача биохимии.</strong> Корень уравнения Михаэлиса–Ментена с торможением (<span class="math inline">\(S \approx 3.54\)</span> мкмоль/л для наших параметров и отрезка <span class="math inline">\([1;20]\)</span>) показывает, какую концентрацию субстрата нужно поддерживать экспериментатору. Существование второй ветви решения (у этого уравнения есть ещё корень при <span class="math inline">\(S \approx 56.5\)</span> мкмоль/л, уже за пределами выбранного отрезка) напоминает, что у немонотонной зависимости одна и та же скорость достигается при двух разных концентрациях — и выбор между ними определяется биологическим смыслом, а не математикой.</li>
+</ul>
+<p>Общий вывод: численный метод не заменяет постановку задачи. Он лишь ускоряет её решение — но только при корректно указанных границах, точности и допущениях.</p>
+</section>
+<section id="ограничения-применимости" class="level1">
+<h1>Ограничения применимости</h1>
+<section id="математические-ограничения" class="level2">
+<h2 class="anchored" data-anchor-id="математические-ограничения">Математические ограничения</h2>
+<ul>
+<li>Бисекция требует <strong>смены знака на концах отрезка</strong>; для касательного корня (например, <span class="math inline">\(f(x)=x^2\)</span>) она неприменима, хотя корень существует.</li>
+<li>Метод Ньютона требует дифференцируемости и ненулевой производной; при <span class="math inline">\(f'\approx 0\)</span> метод теряет устойчивость.</li>
+<li>Формула Симпсона применима при <strong>чётном</strong> числе интервалов; формулы с равноотстоящими узлами — только на равномерной сетке (в клинике пробы берут неравномерно, тогда нужны обобщённые или трапеционные схемы).</li>
+<li>Численное дифференцирование усиливает шум: погрешность результата всегда больше погрешности исходных данных.</li>
+</ul>
+</section>
+<section id="численные-ограничения" class="level2">
+<h2 class="anchored" data-anchor-id="численные-ограничения">Численные ограничения</h2>
+<ul>
+<li>Точность ограничена машинной арифметикой: при слишком малом допуске <code>xtol</code> итерации прекращаются не из-за достижения точности, а из-за округления.</li>
+<li>Оценка порядка сходимости по двум соседним шагам сама по себе содержит погрешность; для надёжного вывода нужны 4–5 значений <span class="math inline">\(h\)</span>.</li>
+<li>Отношение ошибок при измельчении сетки справедливо только в <strong>асимптотическом режиме</strong> (достаточно малые <span class="math inline">\(h\)</span>); на грубой сетке картина искажена.</li>
+</ul>
+</section>
+<section id="ограничения-данных" class="level2">
+<h2 class="anchored" data-anchor-id="ограничения-данных">Ограничения данных</h2>
+<ul>
+<li>Экспоненциальная модель предполагает мгновенное введение и однородное распределение препарата; реальная кинетика часто двухкамерная, что даёт двухфазную кривую.</li>
+<li>Концентрации измеряются с погрешностью лабораторного метода (обычно 5–15 % в области нижней границы), которая напрямую влияет на оценку производной.</li>
+<li>Округление при регистрации результата (например, до 0.1 мг/л) само по себе является источником погрешности, сопоставимым с аналитической.</li>
+</ul>
+</section>
+<section id="ограничения-клинической-интерпретации" class="level2">
+<h2 class="anchored" data-anchor-id="ограничения-клинической-интерпретации">Ограничения клинической интерпретации</h2>
+<ul>
+<li><span class="math inline">\(C_{\text{МТК}}\)</span> и <span class="math inline">\(C_0\)</span> различаются у пациентов; выводы, полученные для «среднего» набора параметров, не переносятся автоматически на конкретного больного.</li>
+<li>AUC, вычисленная по 5–7 пробам, может отличаться от истинной на десятки процентов; для регуляторных решений число проб и схема отбора должны быть обоснованы отдельно.</li>
+<li>Модель ничего не говорит о <strong>фармакодинамике</strong> — связи концентрации с эффектом. Терапевтический порог сам по себе является упрощением.</li>
+</ul>
+</section>
+</section>
+<section id="контрольные-вопросы-и-задания" class="level1">
+<h1>Контрольные вопросы и задания</h1>
+<section id="базовый-уровень" class="level2">
+<h2 class="anchored" data-anchor-id="базовый-уровень">Базовый уровень</h2>
+<ol type="1">
+<li>Почему метод бисекции требует, чтобы значения функции на концах отрезка имели разные знаки?</li>
+<li>Сколько итераций бисекции нужно, чтобы сузить отрезок <span class="math inline">\([0;48]\)</span> до точности <span class="math inline">\(10^{-6}\)</span> ч?</li>
+<li>Чем отличается порядок точности формулы трапеций от формулы Симпсона? Во сколько раз уменьшится ошибка каждой из них при уменьшении шага вдвое?</li>
+<li>Почему центральная разность точнее односторонней?</li>
+<li>Что произойдёт с результатом численного дифференцирования, если шаг <span class="math inline">\(h\)</span> устремить к нулю?</li>
+</ol>
+</section>
+<section id="средний-уровень" class="level2">
+<h2 class="anchored" data-anchor-id="средний-уровень">Средний уровень</h2>
+<ol type="1">
+<li>Измените <span class="math inline">\(k\)</span> в примере A (например, на 0.05 и 0.3 ч⁻¹) и постройте таблицу «<span class="math inline">\(k\)</span> — время выхода ниже порога». Объясните характер зависимости.</li>
+<li>Реализуйте метод секущих и сравните число итераций с методом Ньютона на той же задаче.</li>
+<li>Вычислите AUC трапециями при 5, 9 и 13 пробах и постройте график зависимости относительной ошибки от числа проб.</li>
+<li>Добавьте в данные примера C случайную погрешность измерений и исследуйте, как меняется разброс оценки <span class="math inline">\(k\)</span>.</li>
+</ol>
+</section>
+<section id="продвинутый-уровень" class="level2">
+<h2 class="anchored" data-anchor-id="продвинутый-уровень">Продвинутый уровень</h2>
+<ol type="1">
+<li>Постройте график сходимости (ошибка от шага в логарифмических координатах) для трапеций и Симпсона и оцените наклоны прямых численно. Совпадают ли они с теоретическими значениями 2 и 4?</li>
+<li>Для уравнения Михаэлиса–Ментена с торможением найдите <strong>оба</strong> корня при <span class="math inline">\(v=0.4\)</span> мкмоль/(л·мин) и объясните, какой из них имеет биохимический смысл.</li>
+<li>Оцените <span class="math inline">\(k\)</span> методом наименьших квадратов по <span class="math inline">\(\ln C\)</span> для таблицы из примера C и сравните результат с оценкой по центральным разностям. Какой метод устойчивее и почему?</li>
+<li>Предложите схему отбора проб (число и моменты), при которой AUC вычисляется с относительной ошибкой не более 1 %, и обоснуйте её.</li>
+</ol>
+</section>
+</section>
+<section id="материалы-главы" class="level1">
+<h1>Материалы главы</h1>
+<ul>
+<li><a href="text/academic_note.md">Академическая справка</a></li>
+<li><a href="text/mathematical_model.md">Математическая модель</a></li>
+<li><a href="text/computational_experiment.md">Вычислительный эксперимент</a></li>
+<li><a href="text/interpretation.md">Интерпретация</a></li>
+<li><a href="text/limitations.md">Ограничения</a></li>
+<li><a href="julia/">Скрипты Julia</a></li>
+<li><a href="pluto/">Блокноты Pluto</a></li>
+<li><a href="data/">Данные</a></li>
+<li><a href="results/">Результаты</a></li>
+<li><a href="figures/">Рисунки</a></li>
+<li><a href="references/">Источники</a></li>
+<li><a href="teaching/">Методические материалы</a></li>
+</ul>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
